@@ -1,7 +1,8 @@
-import Link from "next/link";
 import { type SanityDocument } from "next-sanity";
 
 import { client } from "@/sanity/client";
+import { Navbar } from "@/components/navbar/Navbar";
+import Hero from "@/components/homePage/Hero";
 
 const POSTS_QUERY = `*[
   _type == "post"
@@ -14,8 +15,15 @@ export default async function IndexPage() {
   const posts = await client.fetch<SanityDocument[]>(POSTS_QUERY, {}, options);
 
   return (
-    <main className="container mx-auto min-h-screen max-w-3xl p-8">
-      <h1 className="text-4xl font-bold mb-8">Posts</h1>
+    <main className="container mx-auto min-h-screen max-w-7xl">
+      <Navbar />
+      <Hero />
+    </main>
+  );
+}
+
+      {/* <h1 className="text-4xl font-bold mb-8">Posts</h1>
+      <Button variant={"default"} size={"lg"}>Click</Button>
       <ul className="flex flex-col gap-y-4">
         {posts.map((post) => (
           <li className="hover:underline" key={post._id}>
@@ -25,7 +33,4 @@ export default async function IndexPage() {
             </Link>
           </li>
         ))}
-      </ul>
-    </main>
-  );
-}
+      </ul> */}
