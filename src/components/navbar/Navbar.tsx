@@ -58,11 +58,12 @@ const components: { title: string; href: string; description: string }[] = [
 export function Navbar() {
 
   return (
-    <div className="flex justify-between items-center p-3">
+    <div className="border-b border-gray-100 shadow-sm shadow-slate-100 fixed top-0 left-0 right-0 z-50 bg-white">
+        <div className=" max-w-7xl mx-auto flex justify-between items-center p-3">
         <div>
             <Link href={'/'} className="flex items-center space-x-2">
                 <Image src={'/logo-white.png'} alt="logo" width={48} height={48} />
-                <p className="font-bold text-xl text-primary">ZarinTeb</p>
+                <p className="font-bold text-2xl text-primary">ZarinTeb</p>
             </Link>
         </div>
         <div>
@@ -144,6 +145,7 @@ export function Navbar() {
         <div className="flex items-center gap-2">
             <SearchBar />
             <LanguageToggle />
+        </div>
         </div>
     </div>
   )

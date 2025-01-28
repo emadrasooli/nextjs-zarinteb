@@ -1,23 +1,25 @@
-import { type SanityDocument } from "next-sanity";
+// import { type SanityDocument } from "next-sanity";
 
-import { client } from "@/sanity/client";
+// import { client } from "@/sanity/client";
 import { Navbar } from "@/components/navbar/Navbar";
 import Hero from "@/components/homePage/Hero";
+import ProductsLink from "@/components/homePage/ProductsLink";
 
-const POSTS_QUERY = `*[
-  _type == "post"
-  && defined(slug.current)
-]|order(publishedAt desc)[0...12]{_id, title, slug, publishedAt}`;
+// const POSTS_QUERY = `*[
+//   _type == "post"
+//   && defined(slug.current)
+// ]|order(publishedAt desc)[0...12]{_id, title, slug, publishedAt}`;
 
 const options = { next: { revalidate: 30 } };
 
 export default async function IndexPage() {
-  const posts = await client.fetch<SanityDocument[]>(POSTS_QUERY, {}, options);
+  // const posts = await client.fetch<SanityDocument[]>(POSTS_QUERY, {}, options);
 
   return (
-    <main className="container mx-auto min-h-screen max-w-7xl">
+    <main>
       <Navbar />
       <Hero />
+      <ProductsLink />
     </main>
   );
 }

@@ -7,7 +7,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Zarin Teb",
+  title: "Zarin Teb - Inspiring a healthy life",
   description: "Inspiring a healthy life",
 };
 

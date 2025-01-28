@@ -17,26 +17,37 @@ const vazirmatn = Vazirmatn({
 })
 
 export function LanguageToggle() {
+  const [language, setLanguage] = React.useState("ENG")
+
+  const handleLanguageSelect = (lang: string) => {
+    setLanguage(lang);
+  };
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon" className="rounded-full">
+        <Button variant="outline" size="sm">
           <LanguagesIcon />
+          {language}
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem>
-          ENG
-        </DropdownMenuItem>
-        <DropdownMenuItem className={`${vazirmatn.className}`}>
-          دری
-        </DropdownMenuItem>
-        <DropdownMenuItem className={`${vazirmatn.className}`}>
-          پشتو
-        </DropdownMenuItem>
+        {language !== "ENG" && (
+          <DropdownMenuItem onClick={() => handleLanguageSelect("ENG")}>
+            ENG
+          </DropdownMenuItem>
+        )}
+        {language !== "دری" && (
+          <DropdownMenuItem className={`${vazirmatn.className}`} onClick={() => handleLanguageSelect("دری")}>
+            دری
+          </DropdownMenuItem>
+        )}
+        {language !== "پشتو" && (
+          <DropdownMenuItem className={`${vazirmatn.className}`} onClick={() => handleLanguageSelect("پشتو")}>
+            پشتو
+          </DropdownMenuItem>
+        )}
       </DropdownMenuContent>
     </DropdownMenu>
   )
 }
-
