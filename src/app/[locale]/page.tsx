@@ -10,7 +10,7 @@ import ProductsLink from "@/components/homePage/ProductsLink";
 //   && defined(slug.current)
 // ]|order(publishedAt desc)[0...12]{_id, title, slug, publishedAt}`;
 
-const options = { next: { revalidate: 30 } };
+// const options = { next: { revalidate: 30 } };
 
 export default async function IndexPage() {
   // const posts = await client.fetch<SanityDocument[]>(POSTS_QUERY, {}, options);

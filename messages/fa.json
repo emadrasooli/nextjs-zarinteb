@@ -1,0 +1,11 @@
+{
+    "Navbar": {
+        "title": "زرین طب",
+        "home": "خانه",
+        "about": "درباره",
+        "product": "محصولات",
+        "service": "خدمات",
+        "contact": "تماس با ما",
+        "searchBar": "جستجو"
+    }
+}

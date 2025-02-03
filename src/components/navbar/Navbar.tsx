@@ -16,6 +16,7 @@ import {
 import Image from "next/image"
 import SearchBar from "./SearchBar"
 import { LanguageToggle } from "./LanguageToggle"
+import { useLocale, useTranslations } from "next-intl"
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -56,6 +57,9 @@ const components: { title: string; href: string; description: string }[] = [
 ]
 
 export function Navbar() {
+  const t = useTranslations("Navbar");
+  const locale = useLocale();
+  const isLTR = locale === 'en';
 
   return (
     <div className="border-b border-gray-100 shadow-sm shadow-slate-100 fixed top-0 left-0 right-0 z-50 bg-white">
@@ -63,7 +67,7 @@ export function Navbar() {
         <div>
             <Link href={'/'} className="flex items-center space-x-2">
                 <Image src={'/logo-white.png'} alt="logo" width={48} height={48} />
-                <p className="font-bold text-2xl text-primary">ZarinTeb</p>
+                <p className="font-bold text-2xl text-primary">{t('title')}</p>
             </Link>
         </div>
         <div>
@@ -72,19 +76,19 @@ export function Navbar() {
                     <NavigationMenuItem>
                         <Link href="/docs" legacyBehavior passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                Home
+                                {t('home')}
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
                         <Link href="/docs" legacyBehavior passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                About
+                                {t('about')}
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                    <NavigationMenuTrigger>Products</NavigationMenuTrigger>
+                    <NavigationMenuTrigger>{t('product')}</NavigationMenuTrigger>
                         <NavigationMenuContent>
                             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                                 <li className="row-span-3">
@@ -117,7 +121,7 @@ export function Navbar() {
                         </NavigationMenuContent>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                        <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+                        <NavigationMenuTrigger>{t('service')}</NavigationMenuTrigger>
                     <NavigationMenuContent>
                          <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {components.map((component) => (
@@ -135,7 +139,7 @@ export function Navbar() {
         <NavigationMenuItem>
           <Link href="/docs" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Contact
+              {t('contact')}
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

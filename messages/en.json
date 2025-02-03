@@ -1,0 +1,11 @@
+{
+    "Navbar": {
+        "title": "Zarin Teb",
+        "home": "Home",
+        "about": "About",
+        "product": "Products",
+        "service": "Services",
+        "contact": "Contact",
+        "searchBar": "Search"
+    }
+}
