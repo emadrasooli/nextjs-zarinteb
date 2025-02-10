@@ -20,6 +20,7 @@ const vazirmatn = Vazirmatn({
 export const metadata: Metadata = {
   title: "Zarin Teb - Inspiring a healthy life",
   description: "Inspiring a healthy life",
+  icons: "./favicon.ico"
 };
 
 export default async function RootLayout({

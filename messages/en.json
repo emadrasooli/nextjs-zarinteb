@@ -1,4 +1,8 @@
 {
+    "metadata": {
+        "title":"Zarin Teb | Inspiring a healthy life",
+        "description": "We manufacture and trade high-quality medical equipment in Afghanistan, ensuring healthcare excellence."
+    },
     "Navbar": {
         "title": "Zarin Teb",
         "home": "Home",
@@ -7,5 +11,11 @@
         "service": "Services",
         "contact": "Contact",
         "searchBar": "Search"
+    },
+    "Hero": {
+        "title": "Inspiring a Healthy Life",
+        "description": "ZarinTeb produces and trades high-quality medical equipment, delivering innovative solutions to inspire healthier lives.",
+        "exploreButton": "Explore products",
+        "aboutButton": "Know more"
     }
 }

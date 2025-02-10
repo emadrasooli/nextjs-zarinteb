@@ -1,51 +1,40 @@
 import Image from "next/image";
-import Link from "next/link";
 
 export default function ProductsLink() {
-  return (
-    <div className="max-w-5xl mx-auto">
-     <div className="grid grid-cols-2 gap-4">
-        <div className="h-full">
-          <div className="bg-white border-2 p-8 rounded-xl">
-            <div className="flex justify-center items-center">
-              <Image src={"/products/Sonoghraphy.png"} alt="product" width={200} height={200}/>
-            </div>
-            <Link href={'/'} className="font-semibold text-primary text-3xl hover:underline underline-offset-2">Medical Machinery</Link>
-          </div>
-        </div>
-        <div className="grid grid-rows-2 gap-4">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="border-2 p-4 rounded-xl">
-                  <div className="flex justify-center items-center">
-                    <Image src={"/products/orthopedic.png"} alt="product" width={100} height={100} />
-                  </div>
-                  <Link href={'/'} className="font-semibold text-primary text-lg hover:underline underline-offset-2">Orthopedic Products</Link>
-              </div>
-              <div className="border-2 p-4 rounded-xl">
-                <div className="flex justify-center items-center">
-                  <Image src={"/products/labaretory.png"} alt="product" width={150} height={150} />
-                </div>
-                <Link href={'/'} className="font-semibold text-primary text-lg hover:underline underline-offset-2">Laboratory Products</Link>
-              </div>
-            </div>
-            <div>
-              <div className="border-2 p-6 rounded-lg">
-                  <div className="flex justify-end items-center">
-                    <Image src={"/products/Hospital-bed.png"} alt="product" width={220} height={220} />
-                  </div>
-                  <Link href={'/'} className="font-semibold text-primary text-2xl hover:underline underline-offset-2">Manufacturing Products</Link>
-              </div>
-            </div>
-        </div>
-     </div>
+  const products = [
+    { src: "/products/manuficturing.svg", alt: "Hospital bed", text: "Manufacturing Products" },
+    { src: "/products/machinery.svg", alt: "Medical Machinery", text: "Medical Machinery" },
+    { src: "/products/orthopedic.svg", alt: "Orthopedic Products", text: "Orthopedic Products" },
+    { src: "/products/labaretory.svg", alt: "Labaretory Products", text: "Labaretory Products" },
+  ]
 
-     <br />
-     <br />
-     <br />
-     <br />
-     <br />
-     <br />
-     <br />
+  return (
+    <div className="max-w-5xl mx-auto flex justify-center items-center">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-8">
+        {products.map((item, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center w-40 lg:w-full border border-primary rounded-xl transition-transform py-6 px-3 duration-300 transform hover:scale-110 cursor-pointer"
+          >
+            <div className="w-32 h-32 relative">
+              <Image 
+                src={item.src} 
+                alt={item.alt}
+                layout="fill"
+                objectFit="contain"
+              />
+            </div>
+            <p className="font-semibold text-sm mt-3 text-gray-500 text-center">{item.text}</p>
+          </div>
+        ))}
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   );
 }
