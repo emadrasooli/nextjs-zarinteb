@@ -17,5 +17,23 @@
         "description": "زرین طب د لوړ کیفیت طبي تجهیزات تولید او تجارت کوي او د نوښت حلونو چمتو کولو سره صحي ژوند هڅوي.",
         "exploreButton": "محصولات وګورئ",
         "aboutButton": "نور یی ولوله"
+    },
+    "productLink": {
+        "manufactureProducts": {
+            "title": "تولیداتي محصولات",
+            "description": "د لوړ کیفیت طبي تجهیزات"
+        },
+        "medicalMachinery": {
+            "title": "طبي ماشینونه",
+            "description": "د تشخیص او درملنې پرمختللي وسایل"
+        },
+        "orthopedicProducts": {
+            "title": "ارتوپیدیک محصولات",
+            "description": "د هډوکو او بندونو لپاره ملاتړ کوونکي حلونه"
+        },
+        "labaretoryProducts": {
+            "title": "لابراتواری محصولات",
+            "description": "د طبي معایناتو لپاره باوري وسایل"
+        }
     }
 }

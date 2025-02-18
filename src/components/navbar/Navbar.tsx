@@ -13,39 +13,33 @@ import {
   PopoverPanel,
 } from '@headlessui/react'
 import {
-  ArrowPathIcon,
   Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { LanguageToggle } from './LanguageToggle'
 import SearchBar from './SearchBar'
+import { Accessibility, Bed, Microscope, Stethoscope } from 'lucide-react'
 
-const products = [
-  { name: 'Medical Machinery', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Manufacturing Products', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Orthopedic Products', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-  { name: 'Laboratory Products', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-]
-const callsToAction = [
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
-]
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const t = useTranslations("Navbar");
-
+  const link = useTranslations("productLink");
+  
+  const products = [
+    { name: link('manufactureProducts.title'), description: link('manufactureProducts.description'), href: '#', icon: Bed },
+    { name: link('medicalMachinery.title'), description: link('medicalMachinery.description'), href: '#', icon: Stethoscope },
+    { name: link('orthopedicProducts.title'), description: link('orthopedicProducts.description'), href: '#', icon: Accessibility },
+    { name: link('labaretoryProducts.title'), description: link('labaretoryProducts.description'), href: '#', icon: Microscope },
+  ]
+  
   return (
     <header className="bg-white border-b border-gray-100 shadow-sm shadow-slate-100">
-      <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8">
+      <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8 px-4">
         <div className="flex lg:flex-1">
           <Link href={'/'} className="flex items-center space-x-2">
             <Image src={'/logo-white.png'} alt="logo" width={48} height={48} />
@@ -62,21 +56,21 @@ export function Navbar() {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-6">
-          <a href="#" className="text-sm/6 font-semibold text-gray-900 hover:bg-slate-100 px-2 py-1 rounded-md">
+          <a href="#" className="text-sm/6 font-medium text-gray-900 hover:bg-slate-100 px-2 py-1 rounded-md">
             {t('home')}
           </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900 hover:bg-slate-100 px-2 py-1 rounded-md">
+          <a href="#" className="text-sm/6 font-medium text-gray-900 hover:bg-slate-100 px-2 py-1 rounded-md">
             {t('about')}
           </a>
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 hover:bg-slate-100 px-2 py-1 rounded-md">
+            <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-medium text-gray-900 hover:bg-slate-100 px-2 py-1 rounded-md">
               {t('product')}
               <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-gray-400" />
             </PopoverButton>
 
             <PopoverPanel
               transition
-              className="absolute top-full -left-8 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white ring-1 shadow-lg ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
+              className="absolute top-full -left-8 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
             >
               <div className="p-4">
                 {products.map((item) => (
@@ -85,7 +79,7 @@ export function Navbar() {
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50"
                   >
                     <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                      <item.icon aria-hidden="true" className="size-6 text-gray-600 group-hover:text-indigo-600" />
+                      <item.icon aria-hidden="true" className="size-6 text-gray-600 group-hover:text-primary" />
                     </div>
                     <div className="flex-auto">
                       <a href={item.href} className="block font-semibold text-gray-900">
@@ -100,10 +94,10 @@ export function Navbar() {
             </PopoverPanel>
 
           </Popover>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900 hover:bg-slate-100 px-2 py-1 rounded-md">
+          <a href="#" className="text-sm/6 font-medium text-gray-900 hover:bg-slate-100 px-2 py-1 rounded-md">
             {t('service')}
           </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900 hover:bg-slate-100 px-2 py-1 rounded-md">
+          <a href="#" className="text-sm/6 font-medium text-gray-900 hover:bg-slate-100 px-2 py-1 rounded-md">
             {t('contact')}
           </a>
         </PopoverGroup>

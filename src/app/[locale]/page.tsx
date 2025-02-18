@@ -4,6 +4,7 @@
 import { Navbar } from "@/components/navbar/Navbar";
 import Hero from "@/components/homePage/Hero";
 import ProductsLink from "@/components/homePage/ProductsLink";
+import StatsSection from "@/components/homePage/statsSection";
 
 // const POSTS_QUERY = `*[
 //   _type == "post"
@@ -17,9 +18,14 @@ export default async function IndexPage() {
 
   return (
     <main>
+
       <Navbar />
+
       <Hero />
+
       <ProductsLink />
+
+      <StatsSection />
     </main>
   );
 }

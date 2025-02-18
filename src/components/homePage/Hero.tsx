@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 export default function Hero() {
     const t = useTranslations('Hero');
     return (
-        <div className="relative h-[400px] lg:h-[500px] w-full px-4">
+        <div className="relative h-[400px] w-full px-4">
             <div className="absolute inset-0 bg-[url('/bg-background.jpeg')] bg-cover bg-center bg-no-repeat opacity-25"></div>
             <div className="absolute inset-0 bg-gradient-to-b from-transparent from-70% to-white"></div>
             <div className="relative flex flex-col items-center justify-center space-y-6 pt-24 lg:pt-32">

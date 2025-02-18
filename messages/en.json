@@ -17,5 +17,23 @@
         "description": "ZarinTeb produces and trades high-quality medical equipment, delivering innovative solutions to inspire healthier lives.",
         "exploreButton": "Explore products",
         "aboutButton": "Know more"
+    },
+    "productLink": {
+        "manufactureProducts": {
+            "title": "Manufacturing Products",
+            "description": "High-quality, precision-crafted medical equipment."
+        },
+        "medicalMachinery": {
+            "title": "Medical Machinery",
+            "description": "Advanced machines for diagnosis and treatment."
+        },
+        "orthopedicProducts": {
+            "title": "Orthopedic Products",
+            "description": "Supportive solutions for bones and joints."
+        },
+        "labaretoryProducts": {
+            "title": "Laboratory Products",
+            "description": "Reliable tools for medical testing."
+        }
     }
 }
