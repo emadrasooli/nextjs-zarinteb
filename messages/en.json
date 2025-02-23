@@ -35,5 +35,25 @@
             "title": "Laboratory Products",
             "description": "Reliable tools for medical testing."
         }
+    },
+    "statsSection": {
+        "title": "Committed to Excellence in Medical Innovation",
+        "description": "We strive to revolutionize healthcare by manufacturing top-tier medical equipment, ensuring accessibility to advanced medical solutions, and empowering healthcare professionals with the tools they need to provide exceptional patient care.",
+        "employeesStats": {
+            "name": "dedicated professionals",
+            "value": "+150"
+        },
+        "productsStats": {
+            "name": "high-quality medical products",
+            "value": "+300"
+        },
+        "costumersStats": {
+            "name": "trusted healthcare providers",
+            "value": "+1000"
+        },
+        "yearsStats": {
+            "name": "years of experience",
+            "value": "+20"
+        }
     }
 }

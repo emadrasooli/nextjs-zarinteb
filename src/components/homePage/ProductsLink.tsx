@@ -17,7 +17,7 @@ export default function ProductsLink() {
         {products.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col items-center lg:w-full border border-primary rounded-xl transition-transform py-6 px-3 duration-300 transform hover:scale-110 cursor-pointer"
+            className="flex flex-col items-center lg:w-full rounded-xl transition-transform py-6 px-3 duration-300 transform hover:scale-105 cursor-pointer"
           >
             <div className="w-24 h-24 lg:w-32 lg-h-32 relative">
               <Image 
@@ -27,7 +27,7 @@ export default function ProductsLink() {
                 objectFit="contain"
               />
             </div>
-            <p className="font-semibold text-xs lg:text-sm mt-3 text-gray-500 text-center">{item.text}</p>
+            <p className="font-medium text-xs lg:text-sm mt-3 text-zinc-500 text-center">{item.text}</p>
           </div>
         ))}
       </div>

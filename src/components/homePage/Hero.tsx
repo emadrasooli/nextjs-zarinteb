@@ -8,13 +8,13 @@ export default function Hero() {
             <div className="absolute inset-0 bg-[url('/bg-background.jpeg')] bg-cover bg-center bg-no-repeat opacity-25"></div>
             <div className="absolute inset-0 bg-gradient-to-b from-transparent from-70% to-white"></div>
             <div className="relative flex flex-col items-center justify-center space-y-6 pt-24 lg:pt-32">
-                <h1 className="font-bold text-3xl md:text-5xl lg:text-6xl text-primary text-center">{t('title')}</h1>
-                <p className="max-w-2xl text-center text-gray-500 text-sm md:text-lg">
+                <h1 className="font-bold text-3xl md:text-5xl lg:text-6xl tracking-tight text-pretty text-primary text-center">{t('title')}</h1>
+                <p className="max-w-2xl text-center text-zinc-500 text-sm md:text-lg">
                     {t('description')}
                 </p>
                 <div className="flex gap-4">
                     <Button variant={"default"} className="rounded-full">{t('exploreButton')}</Button>
-                    <Button variant={"outline"} className="rounded-full text-gray-500">{t('aboutButton')}</Button>
+                    <Button variant={"outline"} className="rounded-full text-zinc-500">{t('aboutButton')}</Button>
                 </div>
             </div>
         </div>

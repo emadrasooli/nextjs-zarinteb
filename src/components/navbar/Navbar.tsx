@@ -38,7 +38,7 @@ export function Navbar() {
   ]
   
   return (
-    <header className="bg-white border-b border-gray-100 shadow-sm shadow-slate-100">
+    <header className="bg-white border-b border-zinc-100 shadow-sm shadow-zinc-100">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8 px-4">
         <div className="flex lg:flex-1">
           <Link href={'/'} className="flex items-center space-x-2">
@@ -50,22 +50,22 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-zinc-700"
           >
             <Bars3Icon aria-hidden="true" className="size-6" />
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-6">
-          <a href="#" className="text-sm/6 font-medium text-gray-900 hover:bg-slate-100 px-2 py-1 rounded-md">
+          <a href="#" className="text-sm/6 font-medium text-zinc-900 hover:bg-slate-100 px-2 py-1 rounded-md">
             {t('home')}
           </a>
-          <a href="#" className="text-sm/6 font-medium text-gray-900 hover:bg-slate-100 px-2 py-1 rounded-md">
+          <a href="#" className="text-sm/6 font-medium text-zinc-900 hover:bg-slate-100 px-2 py-1 rounded-md">
             {t('about')}
           </a>
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-medium text-gray-900 hover:bg-slate-100 px-2 py-1 rounded-md">
+            <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-medium text-zinc-900 hover:bg-slate-100 px-2 py-1 rounded-md">
               {t('product')}
-              <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-gray-400" />
+              <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-zinc-400" />
             </PopoverButton>
 
             <PopoverPanel
@@ -76,13 +76,13 @@ export function Navbar() {
                 {products.map((item) => (
                   <div
                     key={item.name}
-                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50"
+                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-zinc-50"
                   >
-                    <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                      <item.icon aria-hidden="true" className="size-6 text-gray-600 group-hover:text-primary" />
+                    <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-zinc-50 group-hover:bg-white">
+                      <item.icon aria-hidden="true" className="size-6 text-zinc-600 group-hover:text-primary" />
                     </div>
                     <div className="flex-auto">
-                      <a href={item.href} className="block font-semibold text-gray-900">
+                      <a href={item.href} className="block font-semibold text-zinc-900">
                         {item.name}
                         <span className="absolute inset-0" />
                       </a>
