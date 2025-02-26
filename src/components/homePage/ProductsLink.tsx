@@ -13,13 +13,13 @@ export default function ProductsLink() {
 
   return (
     <div className="max-w-5xl mx-auto flex justify-center items-center px-4 lg:px-8">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-8">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 lg:gap-16 2xl:gap-24">
         {products.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col items-center lg:w-full rounded-xl transition-transform py-6 px-3 duration-300 transform hover:scale-105 cursor-pointer"
+            className="flex flex-col items-center lg:w-full rounded-xl transition-transform duration-300 transform hover:scale-105 cursor-pointer"
           >
-            <div className="w-24 h-24 lg:w-32 lg-h-32 relative">
+            <div className="w-24 h-24 lg:w-32 lg:h-32 2xl:w-36 2xl:h-36 relative">
               <Image 
                 src={item.src} 
                 alt={item.alt}
@@ -31,7 +31,6 @@ export default function ProductsLink() {
           </div>
         ))}
       </div>
-      <div className="pb-64"></div>
     </div>
   );
 }

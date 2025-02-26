@@ -3,8 +3,8 @@
 // import { client } from "@/sanity/client";
 import { Navbar } from "@/components/navbar/Navbar";
 import Hero from "@/components/homePage/Hero";
-import ProductsLink from "@/components/homePage/ProductsLink";
 import StatsSection from "@/components/homePage/statsSection";
+import ProductList from "@/components/homePage/ProductList";
 
 // const POSTS_QUERY = `*[
 //   _type == "post"
@@ -23,9 +23,12 @@ export default async function IndexPage() {
 
       <Hero />
 
-      <ProductsLink />
-
       <StatsSection />
+
+      <div className="py-24"/>
+
+      <ProductList />
+
     </main>
   );
 }

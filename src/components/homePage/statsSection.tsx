@@ -12,7 +12,7 @@ import { useTranslations } from "next-intl"
     ]
 
     return (
-      <div className="px-4 max-w-7xl mx-auto flex flex-col lg:flex-row items-center py-32 lg:gap-8 gap-4">
+      <div className="px-4 max-w-7xl mx-auto flex flex-col lg:flex-row items-center  lg:gap-8 gap-4">
             <div className="lg:w-1/2 order-2 lg:order-1">
               <p className="text-2xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
                 {t('title')}
