@@ -55,5 +55,10 @@
             "name": "years of experience",
             "value": "+20"
         }
+    },
+    "ProductsListSection": {
+        "title": "Customers also purchased",
+        "link": "View all products",
+        "details": "Details"
     }
 }

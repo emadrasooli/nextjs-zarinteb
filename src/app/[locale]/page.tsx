@@ -25,8 +25,6 @@ export default async function IndexPage() {
 
       <StatsSection />
 
-      <div className="py-24"/>
-
       <ProductList />
 
     </main>

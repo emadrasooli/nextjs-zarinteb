@@ -55,5 +55,10 @@
                 "name": "سال تجربه",
                 "value": "+۲۰"
             }
+    },
+    "ProductsListSection": {
+        "title": "محصولات ما",
+        "link": "مشاهده همه محصولات",
+        "details": "جزئیات"
     }
 }

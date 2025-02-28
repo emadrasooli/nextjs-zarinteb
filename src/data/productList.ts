@@ -7,16 +7,16 @@ export const products: ProductListType[] = [
         href: '#',
         locals: {
             en: {
-                name: 'Basic Tee',
-                description: 'تی شرت اولیه',
+                name: 'Three-fold bed',
+                description: 'Versatile triple-section bed',
             },
             fa: {
-                name: 'تی شرت اولیه',
-                description: 'تی شرت اولیه',
+                name: 'تخت سه شکن',
+                description: 'تخت قابل تنظیم سه بخشی',
             },
             ps: {
-                name: 'تی شرت اولیه',
-                description: 'تی شرت اولیه',
+                name: 'درې شکنه بستره',
+                description: 'درې برخې لرونکې بستره',
             }
         }
     },
@@ -27,7 +27,7 @@ export const products: ProductListType[] = [
         locals: {
             en: {
                 name: 'Basic Tee',
-                description: 'تی شرت اولیه',
+                description: 'lorem ipsum is very',
             },
             fa: {
                 name: 'تی شرت اولیه',
@@ -46,7 +46,7 @@ export const products: ProductListType[] = [
         locals: {
             en: {
                 name: 'Basic Tee',
-                description: 'تی شرت اولیه',
+                description: 'lorem ipsum is very',
             },
             fa: {
                 name: 'تی شرت اولیه',
@@ -65,7 +65,7 @@ export const products: ProductListType[] = [
         locals: {
             en: {
                 name: 'Basic Tee',
-                description: 'تی شرت اولیه',
+                description: 'lorem ipsum is very',
             },
             fa: {
                 name: 'تی شرت اولیه',
@@ -84,7 +84,7 @@ export const products: ProductListType[] = [
         locals: {
             en: {
                 name: 'Basic Tee',
-                description: 'تی شرت اولیه',
+                description: 'lorem ipsum is very',
             },
             fa: {
                 name: 'تی شرت اولیه',
@@ -103,7 +103,7 @@ export const products: ProductListType[] = [
         locals: {
             en: {
                 name: 'Basic Tee',
-                description: 'تی شرت اولیه',
+                description: 'lorem ipsum is very',
             },
             fa: {
                 name: 'تی شرت اولیه',
@@ -122,7 +122,7 @@ export const products: ProductListType[] = [
         locals: {
             en: {
                 name: 'Basic Tee',
-                description: 'تی شرت اولیه',
+                description: 'lorem ipsum is very',
             },
             fa: {
                 name: 'تی شرت اولیه',
@@ -141,7 +141,7 @@ export const products: ProductListType[] = [
         locals: {
             en: {
                 name: 'Basic Tee',
-                description: 'تی شرت اولیه',
+                description: 'lorem ipsum is very',
             },
             fa: {
                 name: 'تی شرت اولیه',
