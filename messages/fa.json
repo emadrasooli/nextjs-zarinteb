@@ -60,5 +60,32 @@
         "title": "محصولات ما",
         "link": "مشاهده همه محصولات",
         "details": "جزئیات"
+    },
+    "footer": {
+        "title": "زرین طب",
+        "description": "نوآوری در تجهیزات پزشکی برای بهبود مراقبت‌های بهداشتی در سراسر جهان.",
+        "copyright": "زرین طب، همه حقوق محفوظ است.",
+        "products": "محصولات",
+        "productsLink": {
+            "manufacturing": "تولیدی",
+            "medicalMachinery": "ماشین‌آلات طبی",
+            "orthopedic": "ارتوپدی",
+            "laboratory": "لابراتواری"
+        },
+        "support": "پشتیبانی",
+        "supportLink": {
+            "contact": "تماس با ما"
+        },
+        "company": "شرکت",
+        "companyLink": {
+            "about": "درباره ما",
+            "services": "خدمات"
+        },
+        "legal": "قوانین",
+        "legalLink": {
+            "terms": "شرایط و قوانین",
+            "privacy": "حریم خصوصی"
+        }
+
     }
 }

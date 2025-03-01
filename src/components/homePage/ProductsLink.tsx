@@ -27,7 +27,7 @@ export default function ProductsLink() {
                 objectFit="contain"
               />
             </div>
-            <p className="font-medium text-xs lg:text-sm mt-3 text-zinc-500 text-center">{item.text}</p>
+            <p className="font-medium text-xs lg:text-sm mt-3 text-zinc-500 text-center md:text-nowrap">{item.text}</p>
           </div>
         ))}
       </div>

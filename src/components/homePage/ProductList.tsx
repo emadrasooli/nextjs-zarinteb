@@ -9,7 +9,7 @@ import { useTranslations } from "next-intl"
 
     return (
         <div className="mx-auto px-4 sm:px-6 py-24 lg:py-32 2xl:py-40 max-w-7xl lg:px-8">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col md:items-center md:justify-between space-y-2 md:flex-row md:space-y-0">
             <h2 className="text-xl md:text-2xl font-bold tracking-tight text-gray-900">{t('title')}</h2>
             <Link href={'#'} className="text-primary md:text-base text-xs font-medium hover:underline underline-offset-2">{t('link')}</Link>
           </div>

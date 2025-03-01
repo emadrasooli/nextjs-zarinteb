@@ -60,6 +60,33 @@
         "title": "محصولات موږ",
         "link": "ټول محصولات وګورئ",
         "details": "تفصیلات"
+    },
+    "footer": {
+        "title": "زرین طب",
+        "description": "د روغتیا پاملرنې په ټوله نړۍ کې د ښه والي لپاره د طبي وسایلو نوښت.",
+        "copyright": "زرین طب، ټول حقونه خوندي دي.",
+        "products": "محصولات",
+        "productsLink": {
+            "manufacturing": "تولیدی",
+            "medicalMachinery": "طبي ماشینونه",
+            "orthopedic": "ارتوپیدیک",
+            "laboratory": "لابراتواری"
+        },
+        "support": "پشتونونه",
+        "supportLink": {
+            "contact": "اړیکه"
+        },
+        "company": "شرکت",
+        "companyLink": {
+            "about": "په اړه",
+            "services": "خدمات"
+        },
+        "legal": "قوانین",
+        "legalLink": {
+            "terms": "شرایط او قوانین",
+            "privacy": "شخصي محرمیت"
+        }
+
     }
     
 }

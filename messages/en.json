@@ -60,5 +60,32 @@
         "title": "Customers also purchased",
         "link": "View all products",
         "details": "Details"
+    },
+    "footer": {
+        "title": "Zarin Teb",
+        "description": "Innovating medical equipment for better healthcare worldwide.",
+        "copyright": "Zarin Teb, All rights reserved.",
+        "products": "Products",
+        "productsLink": {
+            "manufacturing": "manufacturing",
+            "medicalMachinery": "medical machinery",
+            "orthopedic": "orthopedic",
+            "laboratory": "laboratory"
+        },
+        "support": "Support",
+        "supportLink": {
+            "contact": "contact us"
+        },
+        "company": "Company",
+        "companyLink": {
+            "about": "About us",
+            "services": "Services"
+        },
+        "legal": "Legal",
+        "legalLink": {
+            "terms": "Terms",
+            "privacy": "Privacy policy"
+        }
+
     }
 }
