@@ -8,6 +8,7 @@ import ProductList from "@/components/homePage/ProductList";
 import Footer from "@/components/Footer";
 import LogoSection from "@/components/LogoSection";
 import ServicesSection from "@/components/homePage/ServicesSection";
+import ContactCTA from "@/components/homePage/ContactCTA";
 
 // const POSTS_QUERY = `*[
 //   _type == "post"
@@ -32,6 +33,8 @@ export default async function IndexPage() {
       <LogoSection />
 
       <ServicesSection />
+
+      <ContactCTA />
 
       <Footer />
     </main>

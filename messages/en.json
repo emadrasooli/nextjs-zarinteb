@@ -90,5 +90,25 @@
             "privacy": "Privacy policy"
         }
 
+    },
+    "servicesSection": {
+        "heading": "Services we offer to support your progress.",
+        "F1": {
+            "name": "Ambulance and Lab Outfitting",
+            "description": "From design to installation, we offer full-service outfitting for ambulances and laboratory rooms."
+        },
+        "F2": {
+            "name": "Global Medical Imports",
+            "description": "Importing essential medical equipment and supplies from global sources to meet your needs in Afghanistan."
+        },
+        "F3": {
+            "name": "Medical Equipment Repair",
+            "description": "We offer comprehensive repair and maintenance for medical equipment, including importing original parts as needed."
+        }
+    },
+    "ContactCTA": {
+        "heading": "Enhancing lives with better care. Connect with us today.",
+        "primaryLink": "Contact Us",
+        "secondaryLink": "Learn More"
     }
 }
