@@ -1,7 +1,7 @@
 import { useLocale, useTranslations } from "next-intl";
 
   
-  export default function Example() {
+  export default function Footer() {
     const locale = useLocale();
 
     const getLocalizedYear = () => {

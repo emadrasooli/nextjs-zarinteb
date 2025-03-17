@@ -6,6 +6,8 @@ import type { Metadata } from "next";
 import { Montserrat, Vazirmatn } from "next/font/google";
 import "./globals.css";
 import { cn } from '@/lib/utils';
+import { Navbar } from '@/components/navbar/Navbar';
+import Footer from '@/components/Footer';
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -42,7 +44,9 @@ export default async function RootLayout({
         className={cn(isLTR ? 'font-montserrat' : 'font-vazirmatn')}
       >
         <NextIntlClientProvider messages={messages}>
-        {children}
+          <Navbar />
+          {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

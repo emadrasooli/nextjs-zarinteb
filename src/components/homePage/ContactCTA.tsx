@@ -17,7 +17,7 @@ export default function ContactCTA() {
               >
                 {t('primaryLink')}
               </Link>
-              <Link href="#" className="text-sm/6 font-semibold text-black px-3.5 py-2.5 hover:bg-zinc-100 rounded-md">
+              <Link href="#" className="text-sm/6 font-semibold text-black hover:underline underline-offset-4 duration-300 transition-all">
                 {t('secondaryLink')}
               </Link>
             </div>
