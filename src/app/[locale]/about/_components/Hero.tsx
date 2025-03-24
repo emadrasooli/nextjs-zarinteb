@@ -1,6 +1,8 @@
 import Pattern from "@/components/Pattern"
+import { useTranslations } from "next-intl"
 
 export default function Hero() {
+  const t = useTranslations('Hero-AboutPage')
     return (
         <div className="relative isolate -z-10">
         <Pattern />
@@ -9,10 +11,10 @@ export default function Hero() {
             <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-start">
               <div className="relative w-full lg:max-w-xl lg:shrink-0 xl:max-w-2xl">
                 <h1 className="text-4xl font-semibold tracking-tighter text-pretty text-primary sm:text-7xl/[4rem]">
-                Your partner in lifelong health and wellness
+                {t('heading')}
                 </h1>
                 <p className="mt-8 font-medium text-pretty text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none">
-                At Zarin Teb, we provide exceptional medical care with skilled professionals and modern facilities. Our comprehensive services reach every province through agencies across Afghanistan, ensuring your health comes first.
+                {t('description')}
                 </p>
               </div>
               <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
@@ -20,7 +22,7 @@ export default function Hero() {
                   <div className="relative">
                     <img
                       alt=""
-                      src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+                      src="\aboutPage\plessure-machince.jpeg"
                       className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                     />
                     <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset" />
@@ -30,7 +32,7 @@ export default function Hero() {
                   <div className="relative">
                     <img
                       alt=""
-                      src="https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+                      src="\aboutPage\medication.jpeg"
                       className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                     />
                     <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset" />
@@ -38,7 +40,7 @@ export default function Hero() {
                   <div className="relative">
                     <img
                       alt=""
-                      src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80"
+                      src="\aboutPage\labaratory-decoration.jpeg"
                       className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                     />
                     <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset" />
@@ -48,7 +50,7 @@ export default function Hero() {
                   <div className="relative">
                     <img
                       alt=""
-                      src="https://images.unsplash.com/photo-1670272504528-790c24957dda?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=left&w=400&h=528&q=80"
+                      src="\aboutPage\hospital-bed.jpeg"
                       className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                     />
                     <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset" />
@@ -56,7 +58,7 @@ export default function Hero() {
                   <div className="relative">
                     <img
                       alt=""
-                      src="https://images.unsplash.com/photo-1670272505284-8faba1c31f7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+                      src="\aboutPage\feel-kids.jpg"
                       className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                     />
                     <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset" />

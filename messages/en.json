@@ -110,5 +110,56 @@
         "heading": "Enhancing lives with better care. Connect with us today.",
         "primaryLink": "Contact Us",
         "secondaryLink": "Learn More"
+    },
+    "Hero-AboutPage": {
+        "heading": "Your partner in lifelong health and wellness",
+        "description": "At Zarin Teb, we provide exceptional medical care with skilled professionals and modern facilities. Our comprehensive services reach every province through agencies across Afghanistan, ensuring your health comes first."
+    },
+    "ContentSection-AboutPage": {
+        "title": "Our mission",
+        "description1": "At Zarin Teb, our mission is to enhance healthcare with high-quality medical furniture and imported machinery. We design innovative solutions and source advanced equipment globally to empower medical professionals with reliable tools for better care.",
+        "description2": "We also decorate laboratories and ambulances, tailoring spaces to healthcare needs, and offer repair services to keep equipment running smoothly. Our goal is to support a future where quality healthcare is always accessible.",
+        "stats1": {
+            "name": "High-quality medical products",
+            "value": "+300"
+        },
+        "stats2": {
+            "name": "Dedicated professionals",
+            "value": "+150"
+        },
+        "stats3": {
+            "name": "Trusted healthcare providers",
+            "value": "+1000"
+        }    
+    },
+    "TimeLine-AboutPage": {
+        "timeLine1": {
+            "name": "Global Foundations",
+            "description": "Launched with investments in world-class imported medical equipment to set industry standards.",
+            "date": "Apr 2022"
+        },
+        "timeLine2": {
+            "name": "Local Innovation",
+            "description": "Began domestic manufacturing of medical furniture, reducing reliance on international suppliers.",
+            "date": "Feb 2023"
+        },
+        "timeLine3": {
+            "name": "Orthopedic Excellence",
+            "description": "Started in-house orthopedic production, prioritizing national self-sufficiency in critical healthcare tools",
+            "date": "Jul 2024"
+        },
+        "timeLine4": {
+            "name": "Expanding Horizons",
+            "description": "Entered new frontiers with advanced medical projects, redefining Zarin Teb’s role in healthcare.",
+            "date": "Jan 2025"
+        }
+    },
+    "LogoSection-AboutPage": {
+        "title": "Leading Innovators We Work With",
+        "description": "Partnering with world-renowned medical manufacturers to deliver cutting-edge technology and quality that redefine healthcare standards."
+    },
+    "OurPeople-AboutPage": {
+        "title": "Our Team in Action",
+        "description": "Witness the passion and precision of our team driving innovation in manufacturing and orthopedic solutions."
     }
 }

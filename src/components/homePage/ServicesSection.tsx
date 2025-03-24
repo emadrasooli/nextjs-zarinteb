@@ -1,8 +1,6 @@
+"use client";
 
 import { ServicesCard } from "../ServicesCard"
-import labaratory from "@/assets/images/services/labaratory-room.png"
-import machinery from "@/assets/images/services/machinery.png"
-import repairEquipment from "@/assets/images/services/repair-equipment.png"
 import { useTranslations } from "next-intl"
 import { useMemo } from "react"
 
@@ -14,21 +12,21 @@ export default function ServicesSection() {
       id: 1,
       name: t('F1.name'),
       description: t('F1.description'),      
-      image: labaratory,
+      image: "/services/labaratory-room.png",
       href: '#'
     },
     {
       id: 2,
       name: t('F2.name'),
       description: t('F2.description'),
-      image: machinery,
+      image: "/services/machinery.png",
       href: '#'
     },
     {
       id: 3,
       name: t('F3.name'),
       description: t('F3.description'),
-      image: repairEquipment,
+      image: "/services/repair-equipment.png",
       href: '#'
     },
   ], [t])
