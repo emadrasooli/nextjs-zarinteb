@@ -1,9 +1,9 @@
 export default function OfficesLocations() {
     return (
-      <div className="bg-white py-24 sm:py-32">
+      <div className="bg-white pb-24 sm:pb-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Our offices</h2>
+            <h2 className="text-pretty text-4xl font-semibold tracking-tight text-primary sm:text-5xl">Our offices</h2>
             <p className="mt-6 text-lg/8 text-gray-600">
               Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui
               laoreet diam sed lacus, fames.
