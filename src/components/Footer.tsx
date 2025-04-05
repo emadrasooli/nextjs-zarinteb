@@ -1,3 +1,4 @@
+import { Link } from "@/i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
 
   
@@ -28,15 +29,15 @@ import { useLocale, useTranslations } from "next-intl";
           { name: t('productsLink.laboratory'), href: '#' },
         ],
         support: [
-          { name: t('supportLink.contact'), href: '#' },
+          { name: t('supportLink.contact'), href: '/contact' }
         ],
         company: [
-          { name: t('companyLink.about'), href: '#' },
-          { name: t('companyLink.services'), href: '#' },
+          { name: t('companyLink.about'), href: '/about' },
+          { name: t('companyLink.services'), href: '/service' },
         ],
         legal: [
-          { name: t('legalLink.terms'), href: '#' }, 
-          { name: t('legalLink.privacy'), href: '#' },
+          { name: t('legalLink.terms'), href: '/terms' }, 
+          { name: t('legalLink.privacy'), href: '/privacy' },
         ],
         social: [
           {
@@ -100,9 +101,9 @@ import { useLocale, useTranslations } from "next-intl";
                   <ul role="list" className="mt-6 space-y-4">
                     {navigation.products.map((item) => (
                       <li key={item.name}>
-                        <a href={item.href} className="text-sm/6 text-gray-400 hover:text-white">
+                        <Link href={item.href} className="text-sm/6 text-gray-400 hover:text-white">
                           {item.name}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
