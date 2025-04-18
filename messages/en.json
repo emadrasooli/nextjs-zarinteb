@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "title":"Zarin Teb | Inspiring a healthy life",
+        "title": "Zarin Teb | Inspiring a healthy life",
         "description": "We manufacture and trade high-quality medical equipment in Afghanistan, ensuring healthcare excellence."
     },
     "Navbar": {
@@ -89,7 +89,6 @@
             "terms": "Terms",
             "privacy": "Privacy policy"
         }
-
     },
     "servicesSection": {
         "heading": "Services we offer to support your progress.",
@@ -130,7 +129,7 @@
         "stats3": {
             "name": "Trusted healthcare providers",
             "value": "+1000"
-        }    
+        }
     },
     "TimeLine-AboutPage": {
         "timeLine1": {
@@ -161,5 +160,47 @@
     "OurPeople-AboutPage": {
         "title": "Our Team in Action",
         "description": "Witness the passion and precision of our team driving innovation in manufacturing and orthopedic solutions."
+    },
+    "ContactPage": {
+        "heading": "Contact Us",
+        "title": "Get in touch",
+        "description": "Have a question or want to work with us? Fill out the form or reach out directly — we’d love to hear from you.",
+        "address": "Eb-sina Market, Eid ghah road, Herat, Afghanistan",
+        "phone": "+93 79 999 9999",
+        "email": "zarinteb@gmail.com",
+        "form": {
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "email": "Email",
+            "phone": "Phone number",
+            "message": "Message",
+            "submit": "Send message"
+        },
+        "ourOffices": {
+            "title": "Our Offices",
+            "description": "We&apos;re proud to have a presence across Afghanistan, serving our clients through multiple locations. Here’s where you can find us.",
+            "locations": {
+                "factory": {
+                    "name": "Factory",
+                    "address": "Industrial Park, Herat, Afghanistan",
+                    "phone": "+93 79 999 9999"
+                },
+                "herat": {
+                    "name": "Herat",
+                    "address": "Eb-sina Market, Eid ghah road, Herat, Afghanistan",
+                    "phone": "+93 79 999 9999"
+                },
+                "kabul": {
+                    "name": "Kabul",
+                    "address": "2nd Street, Taimani Project, Kabul, Afghanistan",
+                    "phone": "+93 79 999 9999"
+                },
+                "mazar": {
+                    "name": "Mazar",
+                    "address": "Opposite Balkh University, Masoud Square, Mazar-e-Sharif",
+                    "phone": "+93 79 999 9999"
+                }
+            }
+        }
     }
 }
