@@ -1,7 +1,17 @@
-export default function Page() {
+import BottomBanner from "./_components/BottomBanner";
+import Hero from "./_components/Hero";
+import MainContent from "./_components/MainContent";
+import ServiceCards from "./_components/ServiceCards";
+
+export default function ServicesPage() {
   return (
-    <div className="flex h-[calc(100vh-72px)] items-center justify-center">
-      <h1>Hello world</h1>
+    <div className="min-h-screen flex flex-col max-w-7xl mx-auto">
+      <main className="flex-grow">
+        <Hero />
+        <MainContent />
+        <ServiceCards />
+        <BottomBanner />
+      </main>
     </div>
   );
 }
