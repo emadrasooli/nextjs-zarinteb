@@ -3,36 +3,49 @@ import Image from "next/image";
 
 export default function MainContent() {
   return (
-    <section className="flex flex-col md:flex-row items-center py-12 lg:py-24">
-      <div className="md:w-1/2">
-        <Image
-          src="/contactPage/banner-4.jpg"
-          alt="Healthcare professionals"
-          className="object-contain rounded-3xl"
-          layout="responsive"
-          width={1000}
-          height={500}
-        />
-      </div>
-      <div className="md:w-1/2 mt-4 md:mt-0 md:ml-10 px-4 md:px-0">
-        <h2 className="text-xl font-bold text-primary">OUR SERVICES</h2>
-        <h3 className="text-3xl font-semibold mt-2">
-          Your Health, Our Priority
-        </h3>
-        <p className="text-gray-600 mt-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <div className="mt-4 bg-yellow-100 p-4 rounded-lg flex items-center">
-          <Headset size={64} className="text-primary" />
-          <span className="ml-2 text-yellow-700">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.
-          </span>
+    <div className="overflow-hidden bg-white py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-8 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
+          <div className="relative isolate sm:mx-auto sm:max-w-7xl lg:max-w-none">
+            <div className="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
+              <Image
+                alt="Product screenshot"
+                src="/contactPage/banner-5.jpg"
+                width={1000}
+                height={1000}
+                className="object-contain lg:rounded-3xl"
+              />
+            </div>
+          </div>
+          {/* hello */}
+          <div className="px-6 lg:px-0 lg:pr-4 lg:pt-4">
+            <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
+              <h2 className="text-base/7 font-semibold text-primary">
+                OUR SERVICES
+              </h2>
+              <p className="mt-2 text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+                Your Health, Our Priority
+              </p>
+              <p className="mt-6 text-lg/8 text-gray-600">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Maiores impedit perferendis suscipit eaque, iste dolor
+                cupiditate blanditiis ratione.
+              </p>
+              <div className="mt-12 bg-yellow-100 p-4 rounded-lg flex items-center gap-3 cursor-pointer">
+                <Headset className="text-primary size-14" />
+                <div>
+                  <p className="font-semibold text-yellow-800">
+                    Emergency Call
+                  </p>
+                  <span className="text-yellow-600 text-sm sm:text-base">
+                    Get in touch with use for emergency services.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

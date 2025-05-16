@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="absolute inset-0 flex items-center justify-center overflow-hidden opacity-20">
         <ServicePattern colorClass="white" />
       </div>
-      <h1 className="text-4xl font-bold text-white sm:text-5xl lg:text-8xl">
+      <h1 className="text-5xl font-bold text-white sm:text-6xl lg:text-8xl">
         Services
       </h1>
     </section>

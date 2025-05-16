@@ -1,4 +1,4 @@
-import BottomBanner from "./_components/BottomBanner";
+// import BottomBanner from "./_components/BottomBanner";
 import Hero from "./_components/Hero";
 import MainContent from "./_components/MainContent";
 import ServiceCards from "./_components/ServiceCards";
@@ -8,9 +8,9 @@ export default function ServicesPage() {
     <div className="min-h-screen flex flex-col max-w-7xl mx-auto">
       <main className="flex-grow">
         <Hero />
-        <MainContent />
         <ServiceCards />
-        <BottomBanner />
+        <MainContent />
+        {/* <BottomBanner /> */}
       </main>
     </div>
   );
