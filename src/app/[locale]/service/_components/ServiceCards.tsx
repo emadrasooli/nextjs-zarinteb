@@ -1,45 +1,42 @@
+import { useTranslations } from "next-intl";
 import ServiceCard from "./ServiceCard";
 
-const services = [
-  {
-    iconSrc: "/services/service-page/1.svg",
-    title: "Birthing Care",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus,",
-  },
-  {
-    iconSrc: "/services/service-page/2.svg",
-    title: "Cancer Care",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, similique error sint aliquam doloremque rem repudiandae obcaecati, impedit.",
-  },
-  {
-    iconSrc: "/services/service-page/3.svg",
-    title: "Orthopedics",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, similique error sint aliquam doloremque rem repudiandae obcaecati, impedit.",
-  },
-  {
-    iconSrc: "/services/service-page/4.svg",
-    title: "Heart Care",
-    description:
-      "Lorem ipsum dolor sit amet cons aliquam doloremque rem repudiandae obcaecati, impedit.",
-  },
-  {
-    iconSrc: "/services/service-page/5.svg",
-    title: "Vaccine",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, srem repudiandae obcaecati, impedit.",
-  },
-  {
-    iconSrc: "/services/service-page/6.svg",
-    title: "Dental Clinic",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, a sint aliquam doloremque rem repudiandae obcaecati, impedit.",
-  },
-];
-
 export default function ServiceCards() {
+  const t = useTranslations("services");
+
+  const services = [
+    {
+      iconSrc: "/services/service-page/1.svg",
+      title: t("service1.title"),
+      description: t("service1.description"),
+    },
+    {
+      iconSrc: "/services/service-page/2.svg",
+      title: t("service2.title"),
+      description: t("service2.description"),
+    },
+    {
+      iconSrc: "/services/service-page/3.svg",
+      title: t("service3.title"),
+      description: t("service3.description"),
+    },
+    {
+      iconSrc: "/services/service-page/4.svg",
+      title: t("service4.title"),
+      description: t("service4.description"),
+    },
+    {
+      iconSrc: "/services/service-page/5.svg",
+      title: t("service5.title"),
+      description: t("service5.description"),
+    },
+    {
+      iconSrc: "/services/service-page/6.svg",
+      title: t("service6.title"),
+      description: t("service6.description"),
+    },
+  ];
+
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-12 lg:pt-24 px-8">
       {services.map((service, index) => (
