@@ -6,22 +6,22 @@ export default function ServiceCards() {
 
   const services = [
     {
-      iconSrc: "/services/service-page/1.svg",
+      iconSrc: "/services/service-page/11.svg",
       title: t("service1.title"),
       description: t("service1.description"),
     },
     {
-      iconSrc: "/services/service-page/2.svg",
+      iconSrc: "/services/service-page/12.svg",
       title: t("service2.title"),
       description: t("service2.description"),
     },
     {
-      iconSrc: "/services/service-page/3.svg",
+      iconSrc: "/services/service-page/13.svg",
       title: t("service3.title"),
       description: t("service3.description"),
     },
     {
-      iconSrc: "/services/service-page/4.svg",
+      iconSrc: "/services/service-page/14.svg",
       title: t("service4.title"),
       description: t("service4.description"),
     },

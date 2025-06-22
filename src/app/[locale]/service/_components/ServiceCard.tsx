@@ -12,7 +12,7 @@ export default function ServiceCard({
   description,
 }: ServiceCardProps) {
   return (
-    <div className="bg-zinc-50 p-6 rounded-2xl border border-zinc-100 shadow-md md:rounded-3xl relative overflow-hidden group cursor-pointer hover:bg-zinc-100 transition-all duration-300 ease-in-out">
+    <div className="bg-zinc-50 p-6 rounded-2xl border border-zinc-100 shadow-md  relative overflow-hidden group cursor-pointer hover:bg-zinc-100 transition-all duration-300 ease-in-out">
       <div className="absolute inset-0 rounded-lg flex items-end justify-end p-2 opacity-50">
         <Image src={iconSrc} alt={title} width={150} height={150} />
       </div>
