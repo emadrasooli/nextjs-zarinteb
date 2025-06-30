@@ -26,12 +26,12 @@ export default function ServiceCards() {
       description: t("service4.description"),
     },
     {
-      iconSrc: "/services/service-page/5.svg",
+      iconSrc: "/services/service-page/8.svg",
       title: t("service5.title"),
       description: t("service5.description"),
     },
     {
-      iconSrc: "/services/service-page/6.svg",
+      iconSrc: "/services/service-page/9.svg",
       title: t("service6.title"),
       description: t("service6.description"),
     },
