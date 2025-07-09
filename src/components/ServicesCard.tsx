@@ -1,12 +1,12 @@
 import { Link } from "@/i18n/routing";
 import { ArrowUpRight } from "lucide-react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 type ServiceCardProps = {
   title: string;
   description: string;
   href: string;
-  backgroundImage: StaticImageData;
+  backgroundImage: string;
 };
 
 export const ServicesCard = ({
@@ -39,9 +39,7 @@ export const ServicesCard = ({
         <Image
           src={backgroundImage}
           alt={`${title} background`}
-          objectFit="contain"
           fill
-          objectPosition="bottom right"
           className=""
         />
       </div>

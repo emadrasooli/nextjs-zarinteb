@@ -1,5 +1,3 @@
-import { StaticImageData } from "next/image";
-
 export interface LocalizedContent {
     name: string;
     description?: string;

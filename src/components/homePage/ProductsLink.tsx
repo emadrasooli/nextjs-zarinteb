@@ -39,7 +39,7 @@ export default function ProductsLink() {
             className="flex flex-col items-center lg:w-full rounded-xl transition-transform duration-300 transform hover:scale-105 cursor-pointer"
           >
             <div className="w-24 h-24 lg:w-32 lg:h-32 2xl:w-36 2xl:h-36 relative">
-              <Image src={item.src} alt={item.alt} fill objectFit="contain" />
+              <Image src={item.src} alt={item.alt} fill />
             </div>
             <p className="font-medium text-xs lg:text-sm mt-3 text-zinc-500 text-center md:text-nowrap">
               {item.text}
