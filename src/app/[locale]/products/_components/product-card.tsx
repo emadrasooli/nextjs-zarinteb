@@ -1,35 +1,51 @@
 import { Link } from "@/i18n/routing";
-import { ProductListType } from "@/types";
+import { urlFor } from "@/lib/sanity";
+import { ProductItem } from "@/types";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-export default function ProductCard({ product }: { product: ProductListType }) {
+export default function ProductCard({
+  product,
+  locale,
+}: {
+  product: ProductItem;
+  locale: string;
+}) {
   const t = useTranslations("ProductsListSection");
-  const locale = useLocale() as "en" | "fa" | "ps";
   const isLTR = locale === "en";
+
+  const imageUrl = urlFor(product.images?.[0]?.asset?._ref);
 
   return (
     <div
-      key={product.id}
+      key={product._id}
       className="relative p-4 lg:p-6 rounded-xl bg-zinc-100 border"
     >
       <div className="">
-        <Image
-          alt={product.locals[locale].name}
-          src={product.imageSrc}
-          className="aspect-square w-full rounded-lg object-cover lg:aspect-auto h-48 lg:h-64"
-          height={500}
-          width={500}
-        />
+        {imageUrl ? (
+          <Image
+            alt={product.name.en}
+            src={imageUrl}
+            className="aspect-square w-full rounded-lg object-cover lg:aspect-auto h-48 lg:h-64"
+            height={500}
+            width={500}
+          />
+        ) : (
+          <div className="placeholder">No Image Available</div>
+        )}
       </div>
       <div className="mt-4 flex flex-col space-y-3">
         <div>
           <h3 className="text-gray-700 font-medium">
-            {product.locals[locale].name}
+            {product.name[locale as keyof typeof product.name] ||
+              product.name.en ||
+              ""}
           </h3>
           <p className="text-sm text-zinc-500">
-            {product.locals[locale].description}
+            {product.description[locale as keyof typeof product.description] ||
+              product.description.en ||
+              ""}
           </p>
         </div>
         <Link
