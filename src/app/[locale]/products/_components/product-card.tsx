@@ -20,7 +20,7 @@ export default function ProductCard({
   return (
     <div
       key={product._id}
-      className="relative p-4 lg:p-6 rounded-xl bg-zinc-100 border"
+      className="relative p-3 lg:p-4 rounded-3xl bg-zinc-100 border"
     >
       <div className="">
         {imageUrl ? (
@@ -42,14 +42,14 @@ export default function ProductCard({
               product.name.en ||
               ""}
           </h3>
-          <p className="text-sm text-zinc-500">
+          <p className="text-sm text-zinc-500 line-clamp-1">
             {product.description[locale as keyof typeof product.description] ||
               product.description.en ||
               ""}
           </p>
         </div>
         <Link
-          href={"#"}
+          href={`/products/${product.slug.current}`}
           className="flex items-center justify-center text-xs font-medium gap-1 hover:gap-2 transition-all duration-200 text-yellow-600 border border-primary bg-yellow-200/50 rounded-lg py-1.5 hover:"
         >
           {t("details")}

@@ -21,9 +21,9 @@ export default async function ProductList(context: {
 
   return (
     <section className="max-w-7xl mx-auto flex flex-col gap-3 my-8">
-      <div className="flex items-center justify-between py-4 gap-4">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-3">
         <div>
-          <h1 className="text-2xl font-semibold">Products</h1>
+          <h1 className="text-lg md:text-2xl font-semibold">Products</h1>
         </div>
         <div className="flex gap-3">
           <Select>
@@ -69,7 +69,7 @@ export default async function ProductList(context: {
           </Select>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {post.map((item: ProductItem) => (
           <ProductCard product={item} key={item._id} locale={locale ?? "en"} />
         ))}

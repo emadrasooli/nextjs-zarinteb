@@ -1,7 +1,7 @@
 export default function IntroProducts() {
   return (
     <section
-      className="relative bg-primary text-white rounded-3xl flex my-3 flex-col items-center justify-center max-w-7xl mx-auto h-[200px] md:h-[350px] lg:h-[450px]"
+      className="relative rounded-3xl flex my-3 flex-col items-center justify-center max-w-7xl mx-auto h-[200px] md:h-[350px] lg:h-[450px]"
       style={{
         backgroundImage: "url('/contactPage/banner-2.jpg')",
         backgroundSize: "cover",

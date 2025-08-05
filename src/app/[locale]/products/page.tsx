@@ -6,7 +6,7 @@ interface PageProps {
   params: any;
 }
 
-export default function productPAge({ params }: PageProps) {
+export default function productPage({ params }: PageProps) {
   return (
     <div className="min-h-screen">
       <IntroProducts />
