@@ -228,5 +228,16 @@
             "title": "تحویل فوری تجهیزات",
             "description": "تحویل سریع تجهیزات پزشکی ممتاز برای نیازهای فوری."
         }
+    },
+    "ProductPage": {
+        "products": "محصولات",
+        "size": "سایز",
+        "category": "دسته‌بندی",
+        "sort": "مرتب‌سازی"
+    },
+    "SingleProductPage": {
+        "Description": "توضیحات",
+        "Features": "ویژگی ها",
+        "Sizes": "سایز ها"
     }
 }

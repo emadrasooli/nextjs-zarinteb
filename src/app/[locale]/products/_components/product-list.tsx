@@ -1,77 +1,47 @@
 import { client } from "@/sanity/client";
 import { ProductItem } from "@/types";
-import { SanityDocument } from "next-sanity";
 import ProductCard from "./product-card";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { Filter } from "./Filter";
+import { SanityDocument } from "next-sanity";
 
-const POST_QUERY = `*[_type == "product"]`;
+const PRODUCT_QUERY = `*[_type == "product" && (!defined($categoryId) || category._ref == $categoryId)]{
+  _id,
+  _type,
+  _createdAt,
+  _updatedAt,
+  slug,
+  code,
+  name,
+  description,
+  price,
+  image,
+  category
+}`;
+const CATEGORY_QUERY = `*[_type == "category"]`;
 
 export default async function ProductList(context: {
   params: { locale?: string };
+  searchParams: { category?: string };
 }) {
-  const { params } = context;
-  const { locale } = await params;
-  const post = await client.fetch<SanityDocument>(POST_QUERY);
+  const { params, searchParams } = context;
+  const { locale = "en" } = await params;
+  const { category: selectedCategoryId } = await searchParams;
+
+  const products = await client.fetch<ProductItem[]>(PRODUCT_QUERY, {
+    categoryId: selectedCategoryId || null,
+  });
+  const categories = await client.fetch<SanityDocument[]>(CATEGORY_QUERY);
 
   return (
     <section className="max-w-7xl mx-auto flex flex-col gap-3 my-8">
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-3">
-        <div>
-          <h1 className="text-lg md:text-2xl font-semibold">Products</h1>
-        </div>
-        <div className="flex gap-3">
-          <Select>
-            <SelectTrigger className="w-[180px]">
-              <SelectValue placeholder="Sort" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="light">Newest</SelectItem>
-              <SelectItem value="dark">Best selling</SelectItem>
-              <SelectItem value="system">Most popular</SelectItem>
-            </SelectContent>
-          </Select>
-
-          <Select>
-            <SelectTrigger className="w-[180px]">
-              <SelectValue placeholder="Category" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="light">Light</SelectItem>
-              <SelectItem value="dark">Dark</SelectItem>
-              <SelectItem value="system">System</SelectItem>
-            </SelectContent>
-          </Select>
-
-          <Select>
-            <SelectTrigger className="w-[120px]">
-              <SelectValue placeholder="Size" />
-            </SelectTrigger>
-            <SelectContent>
-              {["xs", "sl", "md", "lg", "xl", "2xl"].map((size) => (
-                <div key={size} className="flex items-center px-2 py-1 gap-1">
-                  <input
-                    type="checkbox"
-                    id={`size-${size}`}
-                    name="sizes"
-                    value={size}
-                    className="mr-2"
-                  />
-                  <label htmlFor={`size-${size}`}>{size}</label>
-                </div>
-              ))}
-            </SelectContent>
-          </Select>
-        </div>
-      </div>
+      <Filter
+        categories={categories}
+        selectedCategoryId={selectedCategoryId}
+        locale={locale}
+      />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        {post.map((item: ProductItem) => (
-          <ProductCard product={item} key={item._id} locale={locale ?? "en"} />
+        {products.map((item: ProductItem) => (
+          <ProductCard product={item} key={item._id} locale={locale} />
         ))}
       </div>
     </section>

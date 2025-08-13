@@ -228,5 +228,16 @@
             "title": "Urgent Equipment Delivery",
             "description": "Fast delivery of premium medical equipment for urgent needs."
         }
+    },
+    "ProductPage": {
+        "products": "Products",
+        "size": "Size",
+        "category": "Category",
+        "sort": "Sort by"
+    },
+    "SingleProductPage": {
+        "Description": "Description",
+        "Features": "Features",
+        "Sizes": "Sizes"
     }
 }

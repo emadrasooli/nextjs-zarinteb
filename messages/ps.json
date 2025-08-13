@@ -228,5 +228,16 @@
             "title": "بیړني تجهیزات تحویلي",
             "description": "د بیړني اړتیاو لپاره د پریمیم طبي تجهیزاتو چټک تحویلي."
         }
+    },
+    "ProductPage": {
+        "products": "محصولات",
+        "size": "اندازه",
+        "category": "کټګوري",
+        "sort": "ترتیب کول"
+    },
+    "SingleProductPage": {
+        "Description": "تفصیل",
+        "Features": "ځانګړتیاوې",
+        "Sizes": "اندازې"
     }
 }
