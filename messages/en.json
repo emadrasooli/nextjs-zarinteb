@@ -231,13 +231,14 @@
     },
     "ProductPage": {
         "products": "Products",
-        "size": "Size",
+        "similarProducts": "Similar Products",
         "category": "Category",
-        "sort": "Sort by"
+        "all": "All"
     },
     "SingleProductPage": {
         "Description": "Description",
         "Features": "Features",
-        "Sizes": "Sizes"
+        "Sizes": "Sizes",
+        "code": "Code"
     }
 }

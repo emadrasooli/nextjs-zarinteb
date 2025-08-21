@@ -14,7 +14,7 @@ const PRODUCT_QUERY = `*[_type == "product" && (!defined($categoryId) || categor
   name,
   description,
   price,
-  image,
+  images,
   category
 }`;
 const CATEGORY_QUERY = `*[_type == "category"]`;

@@ -10,7 +10,7 @@ export default function ProductCard({
   locale,
 }: {
   product: ProductItem;
-  locale: string;
+  locale: string | undefined;
 }) {
   const t = useTranslations("ProductsListSection");
   const isLTR = locale === "en";

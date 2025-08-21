@@ -61,11 +61,16 @@ export default function ProductDetails({ product, locale }: Props) {
 
         {/* Product info */}
         <div className="mt-10 px-4 sm:mt-16 sm:px-0 lg:mt-0">
-          <h1 className="text-3xl font-bold tracking-tight text-gray-900">
-            {product.name[locale as keyof typeof product.name] ||
-              product.name.en ||
-              ""}
-          </h1>
+          <div className="flex justify-between items-center">
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900">
+              {product.name[locale as keyof typeof product.name] ||
+                product.name.en ||
+                ""}
+            </h1>
+            <span className="items-center rounded-full bg-yellow-300/30 text-sm px-2 py-0.5 font-medium text-yellow-500 inset-ring inset-ring-yellow-600/20">
+              {t("code")}: {product.code}
+            </span>
+          </div>
 
           <div className="mt-6">
             <h3 className="font-semibold text-yellow-500">

@@ -42,13 +42,13 @@ export function Filter({
       <div className="flex gap-3">
         <Select
           onValueChange={handleCategoryChange}
-          defaultValue={selectedCategoryId || "all"}
+          defaultValue={selectedCategoryId ?? ""}
         >
           <SelectTrigger className="w-[180px]">
             <SelectValue placeholder={t("category")} />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="all">{t("category")}</SelectItem>
+            <SelectItem value="all">{t("all")}</SelectItem>
             {categories.map((category: SanityDocument) => (
               <SelectItem key={category._id} value={category._id}>
                 {category.name[locale] || category.name.en}

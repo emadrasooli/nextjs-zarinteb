@@ -231,13 +231,14 @@
     },
     "ProductPage": {
         "products": "محصولات",
-        "size": "اندازه",
+        "similarProducts": "ورته محصولات",
         "category": "کټګوري",
-        "sort": "ترتیب کول"
+        "all": "ټول"
     },
     "SingleProductPage": {
         "Description": "تفصیل",
         "Features": "ځانګړتیاوې",
-        "Sizes": "اندازې"
+        "Sizes": "اندازې",
+        "code": "کوډ"
     }
 }

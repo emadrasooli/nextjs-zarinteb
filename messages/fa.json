@@ -231,13 +231,14 @@
     },
     "ProductPage": {
         "products": "محصولات",
-        "size": "سایز",
+        "similarProducts": "محصولات مشابه",
         "category": "دسته‌بندی",
-        "sort": "مرتب‌سازی"
+        "all": "همه"
     },
     "SingleProductPage": {
         "Description": "توضیحات",
         "Features": "ویژگی ها",
-        "Sizes": "سایز ها"
+        "Sizes": "سایز ها",
+        "code": "کد"
     }
 }
