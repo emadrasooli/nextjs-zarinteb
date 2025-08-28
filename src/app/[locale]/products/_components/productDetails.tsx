@@ -67,7 +67,7 @@ export default function ProductDetails({ product, locale }: Props) {
                 product.name.en ||
                 ""}
             </h1>
-            <span className="items-center rounded-full bg-yellow-300/30 text-sm px-2 py-0.5 font-medium text-yellow-500 inset-ring inset-ring-yellow-600/20">
+            <span className="items-center rounded-full bg-yellow-300/30 px-3 py-2 font-medium text-yellow-600 inset-ring inset-ring-yellow-600/50">
               {t("code")}: {product.code}
             </span>
           </div>
