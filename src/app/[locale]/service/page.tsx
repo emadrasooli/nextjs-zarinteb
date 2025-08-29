@@ -1,4 +1,3 @@
-// import BottomBanner from "./_components/BottomBanner";
 import Hero from "./_components/Hero";
 import MainContent from "./_components/MainContent";
 import ServiceCards from "./_components/ServiceCards";
@@ -10,7 +9,6 @@ export default function ServicesPage() {
         <Hero />
         <ServiceCards />
         <MainContent />
-        {/* <BottomBanner /> */}
       </main>
     </div>
   );

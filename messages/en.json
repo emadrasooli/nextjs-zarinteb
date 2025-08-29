@@ -203,6 +203,18 @@
             }
         }
     },
+    "servicePage": {
+        "service": "Service",
+        "serviceTitle": "Everything you need to enhance your healthcare experience",
+        "serviceSubTitle": "Enjoy Our Services",
+        "serviceCTA": {
+            "title": "Your Health, Our Priority",
+            "subTitle": "Our Services",
+            "description": "We provide trusted medical equipment and support to keep you safe and cared for. Contact us anytime, and we’ll be ready to help you as quickly as possible.",
+            "serviceCall": "Service Call",
+            "descriptionCall": "Get in touch with use for services call."
+        }
+    },
     "services": {
         "service1": {
             "title": "Medical Equipment Services",

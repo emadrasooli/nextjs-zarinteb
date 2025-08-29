@@ -3,6 +3,7 @@ import ServiceCard from "./ServiceCard";
 
 export default function ServiceCards() {
   const t = useTranslations("services");
+  const S = useTranslations("servicePage");
 
   const services = [
     {
@@ -38,15 +39,25 @@ export default function ServiceCards() {
   ];
 
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-12 lg:pt-24 px-8">
-      {services.map((service, index) => (
-        <ServiceCard
-          key={index}
-          iconSrc={service.iconSrc}
-          title={service.title}
-          description={service.description}
-        />
-      ))}
-    </section>
+    <div className="my-24 flex flex-col items-center space-y-4 px-4">
+      <div className="mx-auto max-w-4xl lg:text-center px-4">
+        <h2 className="text-base/7 font-semibold text-primary">
+          {S("serviceSubTitle")}
+        </h2>
+        <p className="mt-2 text-3xl lg:text-4xl font-semibold tracking-tight text-pretty text-gray-800 sm:text-5xl lg:text-balance">
+          {S("serviceTitle")}
+        </p>
+      </div>
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-12 lg:pt-24">
+        {services.map((service, index) => (
+          <ServiceCard
+            key={index}
+            iconSrc={service.iconSrc}
+            title={service.title}
+            description={service.description}
+          />
+        ))}
+      </section>
+    </div>
   );
 }

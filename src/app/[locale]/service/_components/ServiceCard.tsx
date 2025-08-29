@@ -12,13 +12,13 @@ export default function ServiceCard({
   description,
 }: ServiceCardProps) {
   return (
-    <div className="bg-zinc-50 p-6 rounded-2xl border border-zinc-100 shadow-md  relative overflow-hidden group cursor-pointer hover:bg-zinc-100 transition-all duration-300 ease-in-out">
-      <div className="absolute inset-0 rounded-lg flex items-end justify-end p-2 opacity-50">
-        <Image src={iconSrc} alt={title} width={150} height={150} />
+    <div className="bg-zinc-950 px-6 py-8 rounded-2xl border border-zinc-100 shadow-md group cursor-pointer">
+      <div className="w-16 h-16 lg:w-24 lg:h-24 flex items-end">
+        <Image src={iconSrc} alt={title} width={100} height={100} />
       </div>
-      <div className="z-10 relative">
+      <div className="">
         <h3 className="text-lg font-bold text-primary mt-4">{title}</h3>
-        <p className="text-gray-600 mt-2 md:w-2/3">{description}</p>
+        <p className="text-zinc-100 mt-2">{description}</p>
       </div>
     </div>
   );
