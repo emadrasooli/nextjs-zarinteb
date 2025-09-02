@@ -9,15 +9,10 @@ export default async function IndexPage() {
   return (
     <main>
       <Hero />
-
       <StatsSection />
-
       <ProductList />
-
       <LogoSection />
-
       <ServicesSection />
-
       <ContactCTA />
     </main>
   );

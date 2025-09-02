@@ -21,9 +21,9 @@ export default function MainContent() {
               <p className="mt-6 text-lg/8 text-gray-600">{t("description")}</p>
               <Link
                 href={"/contact"}
-                className="mt-12 bg-yellow-100 p-4 rounded-lg flex items-center gap-3 cursor-pointer w-full"
+                className="mt-12 bg-yellow-100 p-4 rounded-lg flex items-center gap-3 cursor-pointer w-full group hover:bg-yellow-200 hover:shadow-md shadow-sm transition-all duration-200"
               >
-                <Headset className="text-primary size-14" />
+                <Headset className="text-primary group-hover:text-yellow-500 transition-all duration-200 size-14" />
                 <div className="flex flex-col items-start">
                   <p className="font-semibold text-yellow-800">
                     {t("serviceCall")}
