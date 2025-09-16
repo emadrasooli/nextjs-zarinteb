@@ -17,7 +17,7 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { LanguageToggle } from "./LanguageToggle";
-import SearchBar from "./SearchBar";
+// import SearchBar from "./SearchBar";
 import { Accessibility, Bed, Microscope, Stethoscope } from "lucide-react";
 import { Link } from "@/i18n/routing";
 
@@ -141,7 +141,7 @@ export function Navbar() {
           </Link>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-2">
-          <SearchBar />
+          {/* <SearchBar /> */}
           <LanguageToggle />
         </div>
       </nav>
@@ -211,7 +211,7 @@ export function Navbar() {
                 </Link>
               </div>
               <div className="space-y-6 py-6">
-                <SearchBar />
+                {/* <SearchBar /> */}
                 <LanguageToggle />
               </div>
             </div>

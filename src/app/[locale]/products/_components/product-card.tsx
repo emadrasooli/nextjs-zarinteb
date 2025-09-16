@@ -8,7 +8,7 @@ export default function ProductCard({
   locale,
 }: {
   product: ProductItem;
-  locale: string;
+  locale: string | undefined;
 }) {
   const imageUrl = urlFor(product.images?.[0]?.asset?._ref);
 

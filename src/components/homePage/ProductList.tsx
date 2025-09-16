@@ -10,16 +10,16 @@ export default function ProductList() {
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-32">
-      <div className="flex items-center justify-between mb-8">
-        <h2 className="font-semibold text-2xl">{t("title")}</h2>
+      <div className="flex flex-col sm:flex-row  sm:items-center justify-between mb-8 gap-2">
+        <h2 className="font-semibold text-xl md:text-2xl">{t("title")}</h2>
         <Link
           href={"/products"}
-          className="text-yellow-500 underline underline-offset-2"
+          className="text-yellow-500 underline underline-offset-2 text-sm "
         >
           {t("link")}
         </Link>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {productsList.map((item: ProductItem) => (
           <ProductCard product={item} key={item._id} locale={locale} />
         ))}

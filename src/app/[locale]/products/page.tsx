@@ -2,8 +2,8 @@ import IntroProducts from "./_components/intro-product";
 import ProductList from "./_components/product-list";
 
 interface PageProps {
-  params: { locale?: string };
-  searchParams: { category?: string };
+  params: Promise<{ locale?: string }>;
+  searchParams: Promise<{ category?: string; q?: string }>;
 }
 
 export default function productPage({ params, searchParams }: PageProps) {

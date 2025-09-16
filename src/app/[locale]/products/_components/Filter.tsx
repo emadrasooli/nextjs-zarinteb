@@ -1,5 +1,7 @@
+// components/Filter.tsx
 "use client";
 
+import React from "react";
 import {
   Select,
   SelectContent,
@@ -15,10 +17,12 @@ export function Filter({
   categories,
   selectedCategoryId,
   locale,
+  searchBar,
 }: {
   categories: SanityDocument[];
   selectedCategoryId?: string;
   locale: string;
+  searchBar?: React.ReactNode;
 }) {
   const t = useTranslations("ProductPage");
   const router = useRouter();
@@ -31,6 +35,7 @@ export function Filter({
     } else {
       newParams.set("category", value);
     }
+    // keep other params (q etc.)
     router.push(`?${newParams.toString()}`);
   };
 
@@ -39,7 +44,10 @@ export function Filter({
       <div>
         <h1 className="text-lg md:text-2xl font-semibold">{t("products")}</h1>
       </div>
-      <div className="flex gap-3">
+
+      <div className="flex gap-3 items-center">
+        {searchBar}
+
         <Select
           onValueChange={handleCategoryChange}
           defaultValue={selectedCategoryId ?? ""}
@@ -51,7 +59,7 @@ export function Filter({
             <SelectItem value="all">{t("all")}</SelectItem>
             {categories.map((category: SanityDocument) => (
               <SelectItem key={category._id} value={category._id}>
-                {category.name[locale] || category.name.en}
+                {category.name?.[locale] ?? category.name?.en}
               </SelectItem>
             ))}
           </SelectContent>

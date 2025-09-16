@@ -245,6 +245,7 @@
         "products": "محصولات",
         "similarProducts": "ورته محصولات",
         "category": "کټګوري",
+        "searchBar": "د محصولاتو لټون ...",
         "all": "ټول"
     },
     "SingleProductPage": {

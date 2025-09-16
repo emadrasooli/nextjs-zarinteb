@@ -18,13 +18,13 @@ export default function Hero() {
         <div className="flex items-center gap-6">
           <Link
             href={"/products"}
-            className="rounded-full bg-primary px-6 py-2 shadow-md hover:bg-yellow-500 transition-all duration-200"
+            className="rounded-full text-sm sm:text-base bg-primary px-6 py-2 shadow-md hover:bg-yellow-500 transition-all duration-200"
           >
             {t("exploreButton")}
           </Link>
           <Link
             href={"/about"}
-            className="rounded-full text-zinc-500 border border-zinc-300 px-6 py-2 hover:bg-zinc-100 transition-all duration-200"
+            className="rounded-full text-sm sm:text-base text-zinc-500 border border-zinc-300 px-6 py-2 hover:bg-zinc-100 transition-all duration-200"
           >
             {t("aboutButton")}
           </Link>

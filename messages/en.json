@@ -245,6 +245,7 @@
         "products": "Products",
         "similarProducts": "Similar Products",
         "category": "Category",
+        "searchBar": "Search products ...",
         "all": "All"
     },
     "SingleProductPage": {
