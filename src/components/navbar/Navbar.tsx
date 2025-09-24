@@ -17,7 +17,6 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { LanguageToggle } from "./LanguageToggle";
-// import SearchBar from "./SearchBar";
 import { Accessibility, Bed, Microscope, Stethoscope } from "lucide-react";
 import { Link } from "@/i18n/routing";
 
@@ -30,25 +29,25 @@ export function Navbar() {
     {
       name: link("manufactureProducts.title"),
       description: link("manufactureProducts.description"),
-      href: "/products?category=e0163037-3d1a-4309-ba13-d4168f3d1922",
+      href: `/products?category=e0163037-3d1a-4309-ba13-d4168f3d1922`,
       icon: Bed,
     },
     {
       name: link("medicalMachinery.title"),
       description: link("medicalMachinery.description"),
-      href: "/products?category=3a92ffc5-0310-4bd7-870e-2e5ece1f0293",
+      href: `/products?category=3a92ffc5-0310-4bd7-870e-2e5ece1f0293`,
       icon: Stethoscope,
     },
     {
       name: link("orthopedicProducts.title"),
       description: link("orthopedicProducts.description"),
-      href: "/products?category=ea62e770-4a8f-4483-9d88-48329b9bf938",
+      href: `/products?category=ea62e770-4a8f-4483-9d88-48329b9bf938`,
       icon: Accessibility,
     },
     {
       name: link("labaretoryProducts.title"),
       description: link("labaretoryProducts.description"),
-      href: "/products?category=1bc16552-8afd-49f9-b643-6656e8f2733b",
+      href: `/products?category=1bc16552-8afd-49f9-b643-6656e8f2733b`,
       icon: Microscope,
     },
   ];
@@ -113,13 +112,13 @@ export function Navbar() {
                       />
                     </div>
                     <div className="flex-auto">
-                      <a
+                      <Link
                         href={item.href}
                         className="block font-semibold text-zinc-900"
                       >
                         {item.name}
                         <span className="absolute inset-0" />
-                      </a>
+                      </Link>
                       <p className="mt-1 text-gray-600">{item.description}</p>
                     </div>
                   </div>
