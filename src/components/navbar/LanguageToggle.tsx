@@ -26,18 +26,18 @@ export function LanguageToggle() {
   const [mounted, setMounted] = React.useState(false);
   const pathname = usePathname();
   const router = useRouter();
-  
-  const getCurrentLocale = () => {
+
+  const getCurrentLocale = React.useCallback(() => {
     const locale = pathname.split("/")[1];
     return Object.keys(languageMap).includes(locale) ? locale : "en";
-  };
-  
+  }, [pathname]);
+
   const [language, setLanguage] = React.useState(getCurrentLocale());
 
   React.useEffect(() => {
     setMounted(true);
     setLanguage(getCurrentLocale());
-  }, [pathname]);
+  }, [pathname, getCurrentLocale]);
 
   const handleLanguageSelect = (locale: string) => {
     setLanguage(locale);
@@ -62,17 +62,20 @@ export function LanguageToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        {Object.entries(languageMap).map(([locale, label]) => (
-          locale !== language && (
-            <DropdownMenuItem
-              key={locale}
-              className={locale === "en" ? montserrat.className : vazirmatn.className}
-              onClick={() => handleLanguageSelect(locale)}
-            >
-              {label}
-            </DropdownMenuItem>
-          )
-        ))}
+        {Object.entries(languageMap).map(
+          ([locale, label]) =>
+            locale !== language && (
+              <DropdownMenuItem
+                key={locale}
+                className={
+                  locale === "en" ? montserrat.className : vazirmatn.className
+                }
+                onClick={() => handleLanguageSelect(locale)}
+              >
+                {label}
+              </DropdownMenuItem>
+            )
+        )}
       </DropdownMenuContent>
     </DropdownMenu>
   );

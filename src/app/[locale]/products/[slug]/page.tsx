@@ -3,7 +3,9 @@ import { ProductItem } from "@/types";
 import ProductDetails from "../_components/productDetails";
 import SimilarProducts from "./_components/similar-products";
 
-type Props = { params: { slug?: string; locale?: string } };
+type Props = {
+  params: Promise<{ slug?: string; locale?: string }>;
+};
 
 export default async function Page({ params }: Props) {
   const { slug, locale } = await params;
