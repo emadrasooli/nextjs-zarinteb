@@ -5,7 +5,7 @@ import ServicesSection from "@/components/homePage/ServicesSection";
 import ContactCTA from "@/components/homePage/ContactCTA";
 import StatsSection from "@/components/homePage/StatsSection";
 
-export default async function IndexPage() {
+export default async function Page() {
   return (
     <main>
       <Hero />
