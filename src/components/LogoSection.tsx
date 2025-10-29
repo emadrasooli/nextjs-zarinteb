@@ -58,8 +58,8 @@ export default function Example() {
     <div className="bg-primary border border-yellow-500 py-16 md:py-28 max-w-7xl mx-auto px-6 lg:px-12 rounded-3xl my-12">
       <div className="flex flex-col items-center space-y-8 md:space-y-12 lg:space-y-16">
         <div className="flex justify-center">
-          <p className="relative rounded-full bg-gray-900 px-6 py-1.5 text-sm/6 text-white">
-            <span className="hidden md:inline">{t("title")}</span>
+          <p className="relative rounded-full bg-gray-900 px-6 py-1.5 text-xs sm:text-sm/6 text-center text-white">
+            {t("title")}
           </p>
         </div>
         <Swiper

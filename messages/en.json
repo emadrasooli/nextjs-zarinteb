@@ -1,7 +1,7 @@
 {
     "metadata": {
         "title": "Zarin Teb | Inspiring a healthy life",
-        "description": "We manufacture and trade high-quality medical equipment in Afghanistan, ensuring healthcare excellence."
+        "description": "We import and trade high-quality medical equipment in Afghanistan, ensuring healthcare excellence."
     },
     "Navbar": {
         "title": "Zarin Teb",
@@ -13,14 +13,14 @@
         "searchBar": "Search"
     },
     "Hero": {
-        "title": "Inspiring a Healthy Life",
-        "description": "ZarinTeb produces and trades high-quality medical equipment, delivering innovative solutions to inspire healthier lives.",
+        "title": "Inspiring an Healthy Life",
+        "description": "ZarinTeb import and trades high-quality medical equipment, delivering innovative solutions to inspire healthier lives.",
         "exploreButton": "Explore products",
         "aboutButton": "Know more"
     },
     "productLink": {
         "manufactureProducts": {
-            "title": "Manufacturing Products",
+            "title": "Furniture Products",
             "description": "High-quality, precision-crafted medical equipment."
         },
         "medicalMachinery": {
@@ -38,7 +38,7 @@
     },
     "statsSection": {
         "title": "Committed to Excellence in Medical Innovation",
-        "description": "We strive to revolutionize healthcare by manufacturing top-tier medical equipment, ensuring accessibility to advanced medical solutions, and empowering healthcare professionals with the tools they need to provide exceptional patient care.",
+        "description": "We strive to revolutionize healthcare by importing top-tier medical equipment, ensuring accessibility to advanced medical solutions, and empowering healthcare professionals with the tools they need to provide exceptional patient care.",
         "employeesStats": {
             "name": "dedicated professionals",
             "value": "+150"
@@ -178,7 +178,7 @@
         },
         "ourOffices": {
             "title": "Our Offices",
-            "description": "We&apos;re proud to have a presence across Afghanistan, serving our clients through multiple locations. Here’s where you can find us.",
+            "description": "We are proud to have a presence across Afghanistan, serving our clients through multiple locations. Here’s where you can find us.",
             "locations": {
                 "factory": {
                     "name": "Factory",
