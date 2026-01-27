@@ -39,7 +39,8 @@ export const ServicesCard = ({
         <Image
           src={backgroundImage}
           alt={`${title} background`}
-          fill
+          width={500}
+          height={500}
           className=""
         />
       </div>

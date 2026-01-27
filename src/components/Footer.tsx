@@ -76,9 +76,8 @@ export default function Footer() {
               <Image
                 alt="Company name"
                 src="/logo-black.png"
-                width={52}
-                height={42}
-                className="h-12 md:h-14"
+                width={56}
+                height={48}
               />
               <p className="text-primary font-bold text-2xl md:text-3xl">
                 {t("title")}
