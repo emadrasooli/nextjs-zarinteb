@@ -33,6 +33,7 @@ export default function ProductDetails({ product, locale }: Props) {
                       height={500}
                       width={500}
                       className="size-full object-cover"
+                      unoptimized
                     />
                   </span>
                   <span
