@@ -53,7 +53,7 @@ export type ProductItem = {
     _ref: string;
     _type: string;
   };
-  sizes: string[];
+  sizes?: string[];
   features: ProductFeature[];
   price: number;
 };

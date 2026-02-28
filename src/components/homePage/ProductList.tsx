@@ -14,7 +14,7 @@ export default function ProductList() {
         <h2 className="font-semibold text-xl md:text-2xl">{t("title")}</h2>
         <Link
           href={"/products"}
-          className="text-yellow-500 underline underline-offset-2 text-sm "
+          className="text-yellow-500 underline underline-offset-2 text-sm"
         >
           {t("link")}
         </Link>

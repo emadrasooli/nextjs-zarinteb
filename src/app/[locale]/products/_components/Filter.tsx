@@ -1,4 +1,3 @@
-// components/Filter.tsx
 "use client";
 
 import React from "react";
@@ -27,6 +26,7 @@ export function Filter({
   const t = useTranslations("ProductPage");
   const router = useRouter();
   const searchParams = useSearchParams();
+  const selectDir = locale === "fa" || locale === "ps" ? "rtl" : "ltr";
 
   const handleCategoryChange = (value: string) => {
     const newParams = new URLSearchParams(searchParams.toString());
@@ -35,7 +35,6 @@ export function Filter({
     } else {
       newParams.set("category", value);
     }
-    // keep other params (q etc.)
     router.push(`?${newParams.toString()}`);
   };
 
@@ -52,13 +51,20 @@ export function Filter({
           onValueChange={handleCategoryChange}
           defaultValue={selectedCategoryId ?? ""}
         >
-          <SelectTrigger className="w-[180px]">
-            <SelectValue placeholder={t("category")} />
+          <SelectTrigger className="w-[180px]" dir={selectDir}>
+            <SelectValue placeholder={t("category")} dir={selectDir} />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="all">{t("all")}</SelectItem>
+            <SelectItem value="all" dir={selectDir} className="px-3">
+              {t("all")}
+            </SelectItem>
             {categories.map((category: SanityDocument) => (
-              <SelectItem key={category._id} value={category._id}>
+              <SelectItem
+                key={category._id}
+                value={category._id}
+                dir={selectDir}
+                className="px-3"
+              >
                 {category.name?.[locale] ?? category.name?.en}
               </SelectItem>
             ))}

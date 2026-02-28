@@ -97,19 +97,21 @@ export default function ProductDetails({ product, locale }: Props) {
             </ul>
           </div>
 
-          <div className="mt-6">
-            <h3 className="font-semibold text-yellow-500">{t("Sizes")}</h3>
-            <div className="flex flex-wrap gap-4 mt-1">
-              {product.sizes.map((size, index) => (
-                <span
-                  key={index}
-                  className="inline-flex justify-center items-center rounded-full bg-yellow-100/50 px-6 py-1 text-xs font-medium text-yellow-800 ring-1 ring-yellow-300"
-                >
-                  {size}
-                </span>
-              ))}
+          {product.sizes?.length ? (
+            <div className="mt-6">
+              <h3 className="font-semibold text-yellow-500">{t("Sizes")}</h3>
+              <div className="flex flex-wrap gap-4 mt-1">
+                {product.sizes.map((size, index) => (
+                  <span
+                    key={index}
+                    className="inline-flex justify-center items-center rounded-full bg-yellow-100/50 px-6 py-1 text-xs font-medium text-yellow-800 ring-1 ring-yellow-300"
+                  >
+                    {size}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          ) : null}
         </div>
       </div>
     </div>
