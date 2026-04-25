@@ -8,6 +8,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/navbar/Navbar";
 import Footer from "@/components/Footer";
+import { Toaster } from "@/components/ui/sonner";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -51,6 +52,7 @@ export default async function RootLayout({
           <Navbar />
           {children}
           <Footer />
+          <Toaster position="bottom-right" />
         </NextIntlClientProvider>
       </body>
     </html>
