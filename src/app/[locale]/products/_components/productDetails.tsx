@@ -5,6 +5,7 @@ import Image from "next/image";
 import { urlFor } from "@/lib/sanity";
 import { ProductItem } from "@/types";
 import { useTranslations } from "next-intl";
+import { Button } from "@/components/ui/button";
 
 type Props = {
   product: ProductItem;
@@ -112,6 +113,10 @@ export default function ProductDetails({ product, locale }: Props) {
               </div>
             </div>
           ) : null}
+
+          <Button className="mt-12 w-full rounded-2xl bg-yellow-200/50 hover:bg-yellow-400/75 py-6 font-medium text-yellow-800 text-lg ring-2 ring-yellow-300 transition-all duration-200">
+            Buy
+          </Button>
         </div>
       </div>
     </div>

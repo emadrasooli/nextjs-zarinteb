@@ -19,7 +19,7 @@ export async function sendEmail(formData: FormData) {
     // 1. Removed 'data' because we only need to check if there is an 'error'
     const { error } = await resend.emails.send({
       from: "Zarinteb Website <noreply@contact.zarinteb.com>",
-      to: "empowerlevel@gmail.com",
+      to: "zarinteb.medicalequipment@gmail.com",
       replyTo: email as string,
       subject: `New Contact Form Submission from ${firstName} ${lastName}`,
       text: `
@@ -38,8 +38,6 @@ export async function sendEmail(formData: FormData) {
 
     return { success: true };
   } catch (error) {
-    // 2. Actually use the 'error' variable by logging it to the server console
-    // This helps you debug if the API ever fails!
     console.error("Resend Error:", error);
     
     return { errorCode: "send_failed" as const };
