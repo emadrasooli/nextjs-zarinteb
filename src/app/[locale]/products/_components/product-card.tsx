@@ -10,7 +10,12 @@ export default function ProductCard({
   product: ProductItem;
   locale: string | undefined;
 }) {
-  const imageUrl = urlFor(product.images?.[0]?.asset?._ref);
+  const imageUrl = urlFor(product.images?.[0]?.asset?._ref)
+    .width(500)
+    .height(500)
+    .format("webp")
+    .quality(75)
+    .url();
 
   return (
     <Link
@@ -30,6 +35,7 @@ export default function ProductCard({
               className="aspect-square w-full rounded-lg object-cover lg:aspect-auto h-48 lg:h-64 group-hover:scale-105 transition-all duration-300 ease-in-out"
               height={500}
               width={500}
+              unoptimized
             />
           ) : (
             <div className="placeholder">No Image Available</div>

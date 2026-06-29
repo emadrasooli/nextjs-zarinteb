@@ -30,7 +30,12 @@ export default function ProductDetails({ product, locale }: Props) {
                   <span className="absolute inset-0 overflow-hidden rounded-md">
                     <Image
                       alt=""
-                      src={urlFor(image.asset._ref)}
+                      src={urlFor(image.asset._ref)
+                        .width(200)
+                        .height(200)
+                        .format("webp")
+                        .quality(75)
+                        .url()}
                       height={500}
                       width={500}
                       className="size-full object-cover"
@@ -51,10 +56,16 @@ export default function ProductDetails({ product, locale }: Props) {
               <TabPanel key={image._key}>
                 <Image
                   alt={image._type}
-                  src={urlFor(image.asset._ref)}
+                  src={urlFor(image.asset._ref)
+                    .width(800)
+                    .height(800)
+                    .format("webp")
+                    .quality(85)
+                    .url()}
                   height={500}
                   width={500}
                   className="aspect-square w-full object-cover sm:rounded-lg"
+                  unoptimized
                 />
               </TabPanel>
             ))}
