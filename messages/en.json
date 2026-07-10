@@ -258,5 +258,17 @@
         "Features": "Features",
         "Sizes": "Sizes",
         "code": "Code"
+    },
+    "OrthoSection": {
+        "CompanyName": "ZarinTeb Company",
+        "BrandName": "Zarin OrthoTeb",
+        "Description": "Advanced orthopedic products designed and manufactured by ZarinTeb to support comfort, recovery, and better mobility.",
+        "Features": [
+            "Medical-Grade Quality",
+            "Modern Orthopedic Solutions",
+            "Comfortable & Durable",
+            "Manufactured by ZarinTeb"
+        ],
+        "exploreButton": "Explore Orthopedic Products"
     }
 }
