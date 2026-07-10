@@ -2,6 +2,7 @@ import { client } from "@/sanity/client";
 import { ProductItem } from "@/types";
 import ProductDetails from "../_components/productDetails";
 import SimilarProducts from "./_components/similar-products";
+import { notFound } from "next/navigation";
 
 type Props = {
   params: Promise<{ slug?: string; locale?: string }>;
@@ -14,6 +15,10 @@ export default async function Page({ params }: Props) {
     *[_type == "product" && slug.current == $slug][0]`;
 
   const product = await client.fetch<ProductItem>(PRODUCT_QUERY, { slug });
+
+  if (!product) {
+    notFound();
+  }
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">

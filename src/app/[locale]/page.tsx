@@ -10,7 +10,7 @@ export default async function Page() {
   return (
     <main>
       <Hero />
-      <LogoSection />
+      {/* <LogoSection /> */}
       <AboutSection />
       <ProductList />
       <OrthoSection />
