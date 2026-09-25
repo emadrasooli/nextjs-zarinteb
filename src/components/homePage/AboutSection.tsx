@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { MotionFadeIn } from "@/components/motion/MotionFadeIn";
 
 export default function AboutSection() {
   const t = useTranslations("statsSection");
@@ -13,7 +14,7 @@ export default function AboutSection() {
 
   return (
     <section className="px-4 max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-12 gap-8 py-12 md:py-20 xl:py-28">
-      <div className="lg:w-1/2 order-2 lg:order-1 space-y-6">
+      <MotionFadeIn direction="up" className="lg:w-1/2 order-2 lg:order-1 space-y-6">
         <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl lg:text-5xl leading-tight">
           {t("title")}
         </h2>
@@ -33,8 +34,8 @@ export default function AboutSection() {
             </div>
           ))}
         </dl>
-      </div>
-      <div className="lg:w-1/2 w-full order-1 lg:order-2">
+      </MotionFadeIn>
+      <MotionFadeIn direction="up" delay={0.2} className="lg:w-1/2 w-full order-1 lg:order-2">
         <Image
           alt="statsBanner"
           src="/stats/statsBanner.jpeg"
@@ -42,7 +43,7 @@ export default function AboutSection() {
           width={600}
           height={600}
         />
-      </div>
+      </MotionFadeIn>
     </section>
   );
 }

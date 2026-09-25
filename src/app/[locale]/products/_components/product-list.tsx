@@ -1,6 +1,6 @@
 import { client } from "@/sanity/client";
 import { ProductItem } from "@/types";
-import ProductCard from "./product-card";
+import ProductGrid from "./ProductGrid";
 import { Filter } from "./Filter";
 import { SanityDocument } from "next-sanity";
 import { SearchBar } from "./search-bar";
@@ -56,11 +56,7 @@ export default async function ProductList(props: {
         searchBar={<SearchBar />}
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        {products.map((item: ProductItem) => (
-          <ProductCard product={item} key={item._id} locale={locale} />
-        ))}
-      </div>
+      <ProductGrid products={products} locale={locale} />
     </section>
   );
 }

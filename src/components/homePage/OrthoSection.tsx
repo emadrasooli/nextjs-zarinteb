@@ -3,6 +3,7 @@ import { CheckCircle2 } from "lucide-react";
 import { Button } from "../ui/button";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
+import { MotionFadeIn } from "@/components/motion/MotionFadeIn";
 
 export default function OrthoSection() {
   const t = useTranslations("OrthoSection");
@@ -17,7 +18,7 @@ export default function OrthoSection() {
 
         <div className="relative z-10 flex flex-col lg:flex-row items-center gap-10 px-6 py-10 md:px-12 md:py-16">
           {/* Left Content */}
-          <div className="w-full lg:w-1/2 space-y-6">
+          <MotionFadeIn direction="up" className="w-full lg:w-1/2 space-y-6">
             {/* Logo + Brand */}
             <div className="flex items-center gap-4">
               <div className="flex h-16 w-16 sm:h-20 sm:w-20 shrink-0 items-center justify-center rounded-2xl border border-emerald-200/80 bg-white shadow-xs p-2">
@@ -72,10 +73,10 @@ export default function OrthoSection() {
                 </Button>
               </Link>
             </div>
-          </div>
+          </MotionFadeIn>
 
           {/* Right Image */}
-          <div className="relative w-full lg:w-1/2 flex justify-center">
+          <MotionFadeIn direction="up" delay={0.2} className="relative w-full lg:w-1/2 flex justify-center">
             <div className="absolute inset-0 bg-emerald-400/10 blur-3xl rounded-full" />
             <Image
               src="/orthoteb-products.png"
@@ -85,7 +86,7 @@ export default function OrthoSection() {
               priority
               className="relative h-auto w-full max-w-lg object-contain drop-shadow-md transition-transform duration-500 hover:scale-102"
             />
-          </div>
+          </MotionFadeIn>
         </div>
       </div>
     </section>
