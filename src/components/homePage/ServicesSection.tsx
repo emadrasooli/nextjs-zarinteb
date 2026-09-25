@@ -35,10 +35,10 @@ export default function ServicesSection() {
   );
 
   return (
-    <div className="py-24 sm:py-32 bg-zinc-100 mt-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none space-y-12">
-          <h2 className="text-3xl/6 font-semibold tracking-tighter text-pretty text-gray-900 sm:text-5xl/10 max-w-lg">
+    <section className="py-20 sm:py-28 bg-gradient-to-b from-zinc-50/70 via-zinc-100/40 to-zinc-50/70 border-y border-zinc-200/60 my-16 lg:my-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none space-y-10">
+          <h2 className="text-3xl font-extrabold tracking-tight text-zinc-900 sm:text-4xl lg:text-5xl max-w-2xl leading-tight">
             {t("heading")}
           </h2>
           <div className="flex flex-col gap-6 md:flex-row">
@@ -54,6 +54,6 @@ export default function ServicesSection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

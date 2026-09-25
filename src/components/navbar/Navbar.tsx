@@ -53,62 +53,62 @@ export function Navbar() {
   ];
 
   return (
-    <header className="bg-white border-b border-zinc-100 shadow-sm shadow-zinc-100">
+    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-zinc-200/80 shadow-subtle transition-all duration-300">
       <nav
         aria-label="Global"
         className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8 px-4"
       >
         <div className="flex lg:flex-1">
-          <Link href={"/"} className="flex items-center space-x-2">
-            <Image src={"/logo-white.png"} alt="logo" width={48} height={48} />
-            <p className="font-bold text-2xl text-primary">{t("title")}</p>
+          <Link href={"/"} className="flex items-center gap-3 group">
+            <Image src={"/logo-white.png"} alt="logo" width={44} height={44} className="transition-transform duration-200 group-hover:scale-105" />
+            <p className="font-extrabold text-2xl text-primary tracking-tight">{t("title")}</p>
           </Link>
         </div>
         <div className="flex lg:hidden">
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-zinc-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-zinc-700 hover:bg-zinc-100"
           >
             <Bars3Icon aria-hidden="true" className="size-6" />
           </button>
         </div>
-        <PopoverGroup className="hidden lg:flex lg:gap-x-6">
+        <PopoverGroup className="hidden lg:flex lg:gap-x-2">
           <Link
             href="/"
-            className="text-sm/6 font-medium text-zinc-900 hover:bg-slate-100 px-2 py-1 rounded-md"
+            className="text-sm font-semibold text-zinc-700 hover:text-zinc-950 hover:bg-zinc-100/80 px-3.5 py-2 rounded-xl transition-all duration-150"
           >
             {t("home")}
           </Link>
           <Link
             href="/about"
-            className="text-sm/6 font-medium text-zinc-900 hover:bg-slate-100 px-2 py-1 rounded-md"
+            className="text-sm font-semibold text-zinc-700 hover:text-zinc-950 hover:bg-zinc-100/80 px-3.5 py-2 rounded-xl transition-all duration-150"
           >
             {t("about")}
           </Link>
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-medium text-zinc-900 hover:bg-slate-100 px-2 py-1 rounded-md">
+            <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold text-zinc-700 hover:text-zinc-950 hover:bg-zinc-100/80 px-3.5 py-2 rounded-xl transition-all duration-150 outline-none">
               {t("product")}
               <ChevronDownIcon
                 aria-hidden="true"
-                className="size-5 flex-none text-zinc-400"
+                className="size-4 flex-none text-zinc-400 transition-transform duration-200"
               />
             </PopoverButton>
 
             <PopoverPanel
               transition
-              className="absolute top-full -left-8 z-20 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
+              className="absolute top-full ltr:-left-8 rtl:-right-8 z-20 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white/95 backdrop-blur-md border border-zinc-200/80 shadow-elevated transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
             >
-              <div className="p-4">
+              <div className="p-3">
                 {products.map((item) => (
                   <div
                     key={item.name}
-                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-zinc-50"
+                    className="group relative flex items-center gap-x-4 rounded-2xl p-3.5 text-sm/6 hover:bg-zinc-50 transition-colors"
                   >
-                    <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-zinc-50 group-hover:bg-white">
+                    <div className="flex size-11 flex-none items-center justify-center rounded-xl bg-yellow-50 group-hover:bg-primary/20 transition-colors">
                       <item.icon
                         aria-hidden="true"
-                        className="size-6 text-zinc-600 group-hover:text-primary"
+                        className="size-5 text-yellow-600 group-hover:text-primary transition-colors"
                       />
                     </div>
                     <div className="flex-auto">
@@ -119,7 +119,7 @@ export function Navbar() {
                         {item.name}
                         <span className="absolute inset-0" />
                       </Link>
-                      <p className="mt-1 text-gray-600">{item.description}</p>
+                      <p className="mt-0.5 text-xs text-zinc-500 line-clamp-1">{item.description}</p>
                     </div>
                   </div>
                 ))}
@@ -128,18 +128,18 @@ export function Navbar() {
           </Popover>
           <Link
             href="/service"
-            className="text-sm/6 font-medium text-gray-900 hover:bg-slate-100 px-2 py-1 rounded-md"
+            className="text-sm font-semibold text-zinc-700 hover:text-zinc-950 hover:bg-zinc-100/80 px-3.5 py-2 rounded-xl transition-all duration-150"
           >
             {t("service")}
           </Link>
           <Link
             href="/contact"
-            className="text-sm/6 font-medium text-gray-900 hover:bg-slate-100 px-2 py-1 rounded-md"
+            className="text-sm font-semibold text-zinc-700 hover:text-zinc-950 hover:bg-zinc-100/80 px-3.5 py-2 rounded-xl transition-all duration-150"
           >
             {t("contact")}
           </Link>
         </PopoverGroup>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-2">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-3">
           {/* <SearchBar /> */}
           <LanguageToggle />
         </div>
@@ -149,13 +149,17 @@ export function Navbar() {
         onClose={setMobileMenuOpen}
         className="lg:hidden"
       >
-        <div className="fixed inset-0 z-10" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex items-center justify-end">
+        <div className="fixed inset-0 z-50 bg-black/30 backdrop-blur-xs" />
+        <DialogPanel className="fixed inset-y-0 end-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm border-s border-zinc-200 shadow-elevated">
+          <div className="flex items-center justify-between pb-4 border-b border-zinc-100">
+            <Link href={"/"} onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2">
+              <Image src={"/logo-white.png"} alt="logo" width={36} height={36} />
+              <p className="font-extrabold text-xl text-primary">{t("title")}</p>
+            </Link>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
+              className="-m-2.5 rounded-xl p-2.5 text-zinc-700 hover:bg-zinc-100"
             >
               <XMarkIcon aria-hidden="true" className="size-6" />
             </button>

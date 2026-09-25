@@ -44,7 +44,7 @@ export default async function RootLayout({
     <html
       lang={locale}
       dir={isLTR ? "ltr" : "rtl"}
-      className={cn(isLTR ? montserrat.variable : vazirmatn.variable)}
+      className={cn(montserrat.variable, vazirmatn.variable)}
       suppressHydrationWarning
     >
       <body className={cn(isLTR ? "font-montserrat" : "font-vazirmatn")}>

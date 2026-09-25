@@ -4,22 +4,22 @@ import { useTranslations } from "next-intl";
 export default function ContactCTA() {
   const t = useTranslations("ContactCTA");
   return (
-    <div className="relative isolate overflow-hidden">
-      <div className="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl/10">
+    <section className="relative isolate overflow-hidden py-16 sm:py-24 my-8">
+      <div className="px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-3xl font-extrabold tracking-tight text-zinc-900 sm:text-4xl lg:text-5xl leading-tight text-balance">
             {t("heading")}
           </h2>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-black shadow-xs hover:bg-primary/80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="rounded-full bg-primary px-6 py-3 text-sm sm:text-base font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 transition-all active:scale-95"
             >
               {t("primaryLink")}
             </Link>
             <Link
               href="/about"
-              className="text-sm/6 font-semibold text-black hover:underline underline-offset-4 duration-300 transition-all"
+              className="rounded-full bg-white/90 backdrop-blur-xs border border-zinc-200 px-6 py-3 text-sm sm:text-base font-medium text-zinc-700 shadow-xs hover:bg-zinc-100 hover:text-zinc-900 transition-all active:scale-95"
             >
               {t("secondaryLink")}
             </Link>
@@ -45,6 +45,6 @@ export default function ContactCTA() {
           </radialGradient>
         </defs>
       </svg>
-    </div>
+    </section>
   );
 }
