@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import { LanguagesIcon } from "lucide-react";
 import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/routing";
@@ -19,29 +18,15 @@ const languageMap: Record<string, string> = {
 };
 
 export function LanguageToggle() {
-  const [mounted, setMounted] = React.useState(false);
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
-
-  React.useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const handleLanguageSelect = (newLocale: string) => {
     const currentSearch = typeof window !== "undefined" ? window.location.search : "";
     const href = currentSearch ? `${pathname}${currentSearch}` : pathname;
     router.replace(href, { locale: newLocale });
   };
-
-  if (!mounted) {
-    return (
-      <Button variant="outline" size="sm" className="rounded-xl gap-2 font-medium">
-        <LanguagesIcon className="size-4" />
-        {languageMap[locale] || "ENG"}
-      </Button>
-    );
-  }
 
   return (
     <DropdownMenu>

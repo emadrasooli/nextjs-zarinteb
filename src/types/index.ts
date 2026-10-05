@@ -57,3 +57,8 @@ export type ProductItem = {
   features: ProductFeature[];
   price: number;
 };
+
+export type CategoryItem = {
+  _id: string;
+  name?: Partial<Record<"en" | "fa" | "ps", string>>;
+};

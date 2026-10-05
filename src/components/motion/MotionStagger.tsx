@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "motion/react";
 import { ReactNode } from "react";
 
 interface MotionStaggerProps {
@@ -12,26 +9,8 @@ interface MotionStaggerProps {
 export function MotionStagger({
   children,
   className,
-  staggerDelay = 0.08,
 }: MotionStaggerProps) {
-  return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-40px" }}
-      variants={{
-        hidden: {},
-        visible: {
-          transition: {
-            staggerChildren: staggerDelay,
-          },
-        },
-      }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
+  return <div className={className}>{children}</div>;
 }
 
 export function MotionStaggerItem({
@@ -41,22 +20,6 @@ export function MotionStaggerItem({
   children: ReactNode;
   className?: string;
 }) {
-  return (
-    <motion.div
-      variants={{
-        hidden: { opacity: 0, y: 20 },
-        visible: {
-          opacity: 1,
-          y: 0,
-          transition: {
-            duration: 0.5,
-            ease: [0.21, 0.47, 0.32, 0.98],
-          },
-        },
-      }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
+  return <div className={className}>{children}</div>;
 }
+
