@@ -15,10 +15,6 @@ export function SearchBar() {
   const [value, setValue] = useState(initial);
 
   useEffect(() => {
-    setValue(initial);
-  }, [initial]);
-
-  useEffect(() => {
     const handler = setTimeout(() => {
       const newParams = new URLSearchParams(searchParams.toString());
       const trimmed = value.trim();

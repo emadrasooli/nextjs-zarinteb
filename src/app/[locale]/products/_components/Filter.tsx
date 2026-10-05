@@ -10,7 +10,10 @@ import {
 } from "@/components/ui/select";
 import { useTranslations } from "next-intl";
 import { useRouter, useSearchParams } from "next/navigation";
-import { SanityDocument } from "next-sanity";
+import { routing } from "@/i18n/routing";
+import type { CategoryItem } from "@/types";
+
+type Locale = (typeof routing.locales)[number];
 
 export function Filter({
   categories,
@@ -18,9 +21,9 @@ export function Filter({
   locale,
   searchBar,
 }: {
-  categories: SanityDocument[];
+  categories: CategoryItem[];
   selectedCategoryId?: string;
-  locale: string;
+  locale: Locale;
   searchBar?: React.ReactNode;
 }) {
   const t = useTranslations("ProductPage");
@@ -58,7 +61,7 @@ export function Filter({
             <SelectItem value="all" dir={selectDir} className="px-3">
               {t("all")}
             </SelectItem>
-            {categories.map((category: SanityDocument) => (
+            {categories.map((category) => (
               <SelectItem
                 key={category._id}
                 value={category._id}

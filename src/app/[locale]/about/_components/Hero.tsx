@@ -11,15 +11,15 @@ export default function Hero() {
         <div className="mx-auto max-w-7xl px-6 pt-24 pb-32 sm:pt-32 lg:px-8 lg:pt-24">
           <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-start">
             <div className="relative w-full lg:max-w-xl lg:shrink-0 xl:max-w-2xl">
-              <h1 className="text-4xl font-semibold tracking-tighter text-pretty text-primary sm:text-7xl/[4rem]">
-                {t("heading")}
+              <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-6xl lg:text-7xl leading-tight">
+                <span className="text-primary">{t("heading")}</span>
               </h1>
-              <p className="mt-8 font-medium text-pretty text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none">
+              <p className="mt-8 font-medium text-pretty text-zinc-600 sm:max-w-md sm:text-xl/8 lg:max-w-none">
                 {t("description")}
               </p>
             </div>
-            <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
-              <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
+            <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:ps-20 lg:mt-0 lg:ps-0">
+              <div className="ms-auto w-44 flex-none space-y-8 pt-32 sm:ms-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
                 <div className="relative">
                   <Image
                     alt=""
@@ -31,7 +31,7 @@ export default function Hero() {
                   <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset" />
                 </div>
               </div>
-              <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
+              <div className="me-auto w-44 flex-none space-y-8 sm:me-0 sm:pt-52 lg:pt-36">
                 <div className="relative">
                   <Image
                     alt=""

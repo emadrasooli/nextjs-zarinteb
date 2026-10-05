@@ -1,8 +1,7 @@
 import type { Config } from "tailwindcss";
-import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
-	darkMode: ["class"],
+	darkMode: "class",
 	content: [
 	"./src/**/*.{js,ts,jsx,tsx}",
 	"./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -51,14 +50,32 @@ export default {
 				'3': 'hsl(var(--chart-3))',
 				'4': 'hsl(var(--chart-4))',
 				'5': 'hsl(var(--chart-5))'
+			},
+			brand: {
+				gold: 'hsl(var(--brand-gold))',
+				'gold-hover': 'hsl(var(--brand-gold-hover))',
+				'gold-light': 'hsl(var(--brand-gold-light))',
+				navy: 'hsl(var(--brand-navy))',
+				teal: 'hsl(var(--brand-teal))',
+				'teal-light': 'hsl(var(--brand-teal-light))'
 			}
 		},
 		borderRadius: {
+			'3xl': '1.5rem',
+			'2xl': '1rem',
+			xl: '0.75rem',
 			lg: 'var(--radius)',
 			md: 'calc(var(--radius) - 2px)',
-			sm: 'calc(var(--radius) - 4px)'
+			sm: 'calc(var(--radius) - 4px)',
+			full: '9999px'
+		},
+		boxShadow: {
+			subtle: '0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05)',
+			card: '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+			elevated: '0 10px 30px -5px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04)',
+			glow: '0 0 25px -5px rgba(245, 158, 11, 0.2)'
 		}
 	}
   },
-  plugins: [tailwindcssAnimate],
+  plugins: [],
 } satisfies Config;

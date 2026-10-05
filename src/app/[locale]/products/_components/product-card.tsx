@@ -10,12 +10,16 @@ export default function ProductCard({
   product: ProductItem;
   locale: string | undefined;
 }) {
-  const imageUrl = urlFor(product.images?.[0]?.asset?._ref)
-    .width(500)
-    .height(500)
-    .format("webp")
-    .quality(75)
-    .url();
+  const firstImageRef = product.images?.[0]?.asset?._ref;
+  const imageUrl = firstImageRef
+    ? urlFor(firstImageRef)
+        .width(500)
+        .height(500)
+        .format("webp")
+        .quality(75)
+        .url()
+    : null;
+
 
   return (
     <Link

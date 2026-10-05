@@ -36,18 +36,18 @@ export default function ProductsLink() {
   );
 
   return (
-    <div className="max-w-5xl mx-auto flex justify-center items-center px-4 lg:px-8">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 lg:gap-16 2xl:gap-24">
+    <div className="max-w-5xl mx-auto px-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
         {products.map((item, index) => (
           <Link
             href={item.href}
             key={index}
-            className="flex flex-col items-center lg:w-full rounded-xl transition-transform duration-300 transform hover:scale-105 cursor-pointer"
+            className="group flex flex-col items-center p-4 md:p-6 rounded-2xl bg-white/70 backdrop-blur-xs border border-zinc-200/80 shadow-subtle hover:shadow-card hover:border-primary/40 hover:-translate-y-1 transition-all duration-300"
           >
-            <div className="w-24 h-24 lg:w-32 lg:h-32 2xl:w-36 2xl:h-36 relative">
-              <Image src={item.src} alt={item.alt} fill />
+            <div className="w-20 h-20 md:w-24 md:h-24 relative p-2 transition-transform duration-300 group-hover:scale-110">
+              <Image src={item.src} alt={item.alt} fill className="object-contain" />
             </div>
-            <p className="font-medium text-xs lg:text-sm mt-3 text-zinc-500 text-center md:text-nowrap">
+            <p className="font-semibold text-xs md:text-sm mt-3 text-zinc-700 text-center group-hover:text-primary transition-colors">
               {item.text}
             </p>
           </Link>

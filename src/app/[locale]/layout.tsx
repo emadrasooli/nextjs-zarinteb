@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/navbar/Navbar";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/sonner";
+import { PageTransition } from "@/components/motion/PageTransition";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -44,13 +45,13 @@ export default async function RootLayout({
     <html
       lang={locale}
       dir={isLTR ? "ltr" : "rtl"}
-      className={cn(isLTR ? montserrat.variable : vazirmatn.variable)}
+      className={cn(montserrat.variable, vazirmatn.variable)}
       suppressHydrationWarning
     >
       <body className={cn(isLTR ? "font-montserrat" : "font-vazirmatn")}>
         <NextIntlClientProvider messages={messages}>
           <Navbar />
-          {children}
+          <PageTransition>{children}</PageTransition>
           <Footer />
           <Toaster position="bottom-right" />
         </NextIntlClientProvider>

@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { MotionFadeIn } from "@/components/motion/MotionFadeIn";
 
 export default function AboutSection() {
   const t = useTranslations("statsSection");
@@ -12,35 +13,37 @@ export default function AboutSection() {
   ];
 
   return (
-    <div className="px-4 max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-8 gap-4 py-6 md:py-12 xl:py-24">
-      <div className="lg:w-1/2 order-2 lg:order-1">
-        <p className="text-2xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
+    <section className="px-4 max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-12 gap-8 py-12 md:py-20 xl:py-28">
+      <MotionFadeIn direction="up" className="lg:w-1/2 order-2 lg:order-1 space-y-6">
+        <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl lg:text-5xl leading-tight">
           {t("title")}
+        </h2>
+        <p className="text-zinc-600 leading-relaxed text-base md:text-lg">
+          {t("description")}
         </p>
-        <p className="mt-6 text-zinc-500">{t("description")}</p>
-        <dl className="mt-16 grid max-w-xl grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 xl:mt-16">
+        <dl className="mt-10 grid max-w-xl grid-cols-1 gap-8 sm:grid-cols-2 pt-4">
           {stats.map((stat) => (
             <div
               key={stat.id}
-              className="flex flex-col gap-y-3 rtl:border-r ltr:border-l border-gray-900/10 rtl:pr-6 ltr:pl-6"
+              className="flex flex-col gap-y-2 border-s-2 border-primary/40 ps-5"
             >
-              <dt className="text-sm/6 text-zinc-500">{stat.name}</dt>
-              <dd className="order-first text-3xl font-semibold tracking-tight text-primary">
+              <dt className="text-sm font-medium text-zinc-500">{stat.name}</dt>
+              <dd className="order-first text-3xl sm:text-4xl font-extrabold tracking-tight text-primary">
                 {stat.value}
               </dd>
             </div>
           ))}
         </dl>
-      </div>
-      <div className="lg:w-1/2 w-full order-1 lg:order-2">
+      </MotionFadeIn>
+      <MotionFadeIn direction="up" delay={0.2} className="lg:w-1/2 w-full order-1 lg:order-2">
         <Image
           alt="statsBanner"
           src="/stats/statsBanner.jpeg"
-          className="object-cover w-full h-[200px] md:h-[300px] lg:h-[500px] rounded-3xl"
-          width={500}
-          height={500}
+          className="object-cover w-full h-[240px] md:h-[340px] lg:h-[480px] rounded-3xl shadow-card border border-zinc-200/60"
+          width={600}
+          height={600}
         />
-      </div>
-    </div>
+      </MotionFadeIn>
+    </section>
   );
 }
